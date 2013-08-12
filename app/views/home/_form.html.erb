@@ -1,0 +1,21 @@
+
+
+<%= form_tag home_index_path do %>
+<table>
+	<tr>
+		<td>A</td>
+		<td>:</td>
+		<td><%= text_field_tag :a %></td>
+	</tr>
+
+	<tr>
+		<td>B</td>
+		<td>:</td>
+		<td><%= text_field_tag :b %></td>
+	</tr>
+
+	<tr>
+		<td colspan='3'><%= submit_tag 'jumlah' %></td>
+	</tr>
+</table>
+<% end %>

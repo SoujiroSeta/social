@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(:version => 20130802031611) do
     t.integer  "user_id"
   end
 
+  create_table "groups", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "groups", ["slug"], :name => "index_groups_on_slug", :unique => true
+
   create_table "groups_users", :force => true do |t|
     t.integer "group_id"
     t.integer "user_id"

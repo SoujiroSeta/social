@@ -1,0 +1,24 @@
+<% if @group.errors.present? %>
+	<ul>
+		<% @group.errors.full_messages.each do |message| %>
+		<li>
+			<%= message%>
+		</li>
+		<% end %>
+	</ul>
+	<% end %>
+
+<%= form_for @group do |f| %>
+<table>
+	<tr>
+		<td>Title</td>
+		<td>:</td>
+		<td><%= f.text_field :title %></td>
+	</tr>
+
+	<tr>
+		<td colspan='3'><%= f.submit %>
+	</tr>
+
+</table>
+<% end %>

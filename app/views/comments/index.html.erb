@@ -1,0 +1,12 @@
+<h1>List All Comment</h1>
+<ul>
+	<% @comments.each do |comment| %>
+	<li>
+		<%= link_to comment.message, comment_path(comment) %>
+		<%= link_to 'Edit', edit_comment_path(comment) %> |
+		<%= link_to 'Delete', comment_path(comment), method: :delete %>
+	</li>
+	<% end %>
+</ul>
+<br/>
+<%= link_to 'New Comment', new_comment_path %>

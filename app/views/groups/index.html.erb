@@ -1,0 +1,12 @@
+<h1>List All Group</h1>
+<ul>
+	<% @groups.each do |group| %>
+	<li>
+		<%= link_to group.title, group_path(group) %>
+		<%= link_to 'Edit', edit_group_path(group) %> |
+		<%= link_to 'Delete', group_path(group), method: :delete %>
+	</li>
+	<% end %>
+</ul>
+<br/>
+<%= link_to 'New Group', new_group_path %>
