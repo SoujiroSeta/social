@@ -2,3 +2,14 @@ https://wireframe.cc/IJETJJ   home login
 https://wireframe.cc/KeqFUM   home register
 https://wireframe.cc/sGKfLS   master question
 https://wireframe.cc/TmqUcs   master user
+
+
+<div class='row-fluid'>
+	<div class='span-8'>
+		<h1 style="color:red;" align="center" title=""> </h1>
+
+<div style='text-align:center'><%= image_tag '/assets/dragon.jpg', class: 'img-circle' %></div>
+<h3 align="center">Do You want to login?</h3>
+<div align='center'><a href="/users/sign_in">Sign In</a> | <a href="/users/sign_up">Sign Up</a></div>
+</div>
+</div>

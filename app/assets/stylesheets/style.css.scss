@@ -1,3 +1,21 @@
+body {
+	background: image-url('/assets/linux.jpg');
+	/*background: #00FF00;*/
+}
+
+#banner {
+	border: 2px solid white;
+	width: 45%;
+	height: 75px;
+	border-radius: 10px 10px 10px 10px;
+	padding:20px;
+	font-size: 50px;
+	font-weight: bolder;
+	/*img {
+		height: 250px;
+		width: 70%;
+	}*/
+}
 .kanan {
 	float:right
 }
@@ -8,4 +26,103 @@
 
 .signin {
 	margin-right:5px;
+}
+
+.toolbar {
+	width:100%;
+	background-color: black;
+	color: white;
+}
+
+
+.margintb {
+	margin: 0px;
+	float:left;
+}
+
+.topcategories {
+	border:2px solid white;
+	border-radius: 10px 10px 10px 10px;
+	width: 35%;
+	height: 75px;
+	padding: 5px;
+}
+
+.topquestions {
+	border:2px solid white;
+	border-radius: 10px 10px 10px 10px;
+	width: 45%;
+	height: 200px;
+	padding: 15px;
+	font-size: 18px;
+	color: red;
+
+}
+
+.ratafoto {
+	margin-top: 60px;
+	float: left;
+}
+
+.warnatext {
+	color: blue;
+	font-size: 20px;
+}
+
+.size {
+	float:left;
+	margin:10px;
+	img {
+		height: 250px;
+		width: 250px;
+	}
+}
+
+.size1 {
+	float:left;
+	margin:10px;
+	img {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+#questionattr {
+	font-size: 6px;
+}
+
+div#satu {
+	color: red;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+div#dua {
+	font-size: 12px;
+}
+
+#category {
+	margin: 5px;
+}
+
+.category1 {
+	margin: 5px;
+	background-color: #7FFFD4;
+	padding: 3px;
+}
+
+a.category1:hover {
+	background-color: white;
+}
+
+#judul {
+	float: left;
+	font-size: 18px;
+	line-height: 34px;
+	margin-bottom: 0px;
+	color: red;
+}
+
+#navbar {
+	float: right;
 }

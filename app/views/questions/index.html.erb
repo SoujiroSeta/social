@@ -1,16 +1,55 @@
+<%= render 'layouts/menu' %>
 <div class='row-fluid'>
 	<div class='span-8'>
-		<h1><button type="button" class= 'btn btn-primary btn-lg'>List All Question</button></h1>
-		<ul>
-			<% @questions.each do |question| %>
-			<li>
-				<%= link_to question.title, question_path(question) %>	<br>
-				<%= link_to 'Edit', edit_question_path(question), class: 'btn btn-primary' %> |
-				<%= link_to 'Delete', question_path(question), method: :delete, class: 'btn btn-danger' %>
-			</li>			
-			<% end %>
+		<br><br><br><br>
+		<div id='banner'>
+			<center>Announcement</center>
+		</div>
+		<div class='kanan'>		
+			<ul class="nav nav-pills">
+  			<li class="active">
+    			<a href="#">Questions</a>
+ 		 	 </li>
+ 		 	 <li>
+ 		  		<a href="#">Users</a>
+ 			  </li>
+  			<li>
+  				<a href="#">Tags</a>
+  			</li>
+			</ul>
+		</div>
+		<div style='clear:both'></div>
+		<div class='topcategories'>
+			<div id='satu'>Hot Question Categories</div>
+			<br>
+			<div id='dua'>
+				<a id='category' href="#">Category</a>
+				<a id='category' href="#">Category</a>
+				<a id='category' href="#">Category</a>
+				<a id='category' href="#">Category</a>
+				<a id='category' href="#">Category</a>
+				<a id='category' href="#">Category</a>
+			</div>
+		</div><br>
+		<h1 id='judul'>Top Question</h1>
+		<ul id='navbar' class="nav nav-tabs">
+  		<li class="active">
+   			<a href="#">Interest</a></li>
+ 		 	<li><a href="#">Hot</a></li>
+ 			<li><a href="#">Week</a></li>
+ 		 	<li><a href="#">Month</a></li>
 		</ul>
-		<br/>
-		<%= link_to 'New Question', new_question_path %>
+		<div style='clear:both'></div>
+		<div class='topquestions'>
+			<div><a href="">Title Question Here</a></div><br>
+				<div id='dua'>
+					<a style='margin-right:50px' href="">screamvoidz</a>
+					<a class='category1' style='margin-right:60px' href="">tag</a>
+					<a id='category' class='kanan' href="">Answer</a>
+					<a id='category' class='kanan' href="">View</a>
+					<a id='category' class='kanan' href="">Vote</a>
+				</div>
+		</div>
+
 	</div>
 </div>
