@@ -2,11 +2,13 @@
 
 <div class='row-fluid'>
 	<div class='span-8'>
-		<br><br><br><br>
 		<div id='banner'>
 			<center>Announcement</center>
 		</div>
-		<div class='kanan'>		
+		<div class='bendera'><%=
+		 image_tag '/assets/bendera.jpg' %>
+		</div>
+		<div class='colomcolom'>		
 			<ul class="nav nav-pills">
   			<li class="active">
     			<a href="#">Questions</a>
@@ -18,7 +20,9 @@
   				<a href="#">Tags</a>
   			</li>
 			</ul>
-		</div><br><br><br><br>
+		</div>
+		<br><br><br><br>
+	</div>
 		<h1 id='judul'>Users</h1>
 		<ul id='navbar' class="nav nav-tabs">
   		<li class="active">
@@ -28,25 +32,39 @@
  		 	<li><a href="#">Month</a></li>
 		</ul>
 		<div style='clear:both'></div>
-		<div>
-			<div class='size'>
-				<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
-			</div>
-			<div class='ratafoto'>
-				<div class='warnatext'>aaaaaaaaa</div><br><br>
-				<div class='warnatext'>aaaaaaaaa</div><br><br>
-				<div class='warnatext'>aaaaaaaaa</div>
-			</div>
-		</div>
-		<div>
-			<div class='size1'>
-				<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
-			</div>
-			<div class='ratafoto'>
-				<div class='warnatext'>addddaaaa</div><br><br>
-				<div class='warnatext'>addddaaaa</div><br><br>
-				<div class='warnatext'>aadddaaaa</div>
-			</div>
-		</div>
-	</div>
+		<ul class='ranking'>
+			<% 25.times do |rank| %>
+				<% if rank == 0 %>
+					<li>
+						<div>
+							<div class='besar'>
+								<div class='size'>
+									<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
+								</div>
+								<div class='ratafoto'>
+									<div class='text'>username</div><br>
+									<div class='text'>reputation</div><br>
+									<div class='text'>tags</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				<% else %>
+					<li>
+						<div>
+							<div>
+								<div class='size2'>
+									<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
+								</div>
+								<div class='ratafoto2'>
+									<div class='text2'>username</div>
+									<div class='text2'>reputation</div>
+									<div class='text2'>tags</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+		</ul>
 </div>

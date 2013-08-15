@@ -1,21 +1,53 @@
 body {
-	background: image-url('/assets/linux.jpg');
-	/*background: #00FF00;*/
+	background: image-url('/assets/batik1.jpg');
+	/*background: gainsboro;*/
+}
+
+.chat {
+	img {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+.bottomleft	{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	clip: inherit;
+	}
+
+.container2 {
+	border: 5px solid black;
+	border-radius: 10px 10px 0px 0px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	width: 80%;	
+	background: #C0C0C0 ;
 }
 
 #banner {
-	border: 2px solid white;
-	width: 45%;
-	height: 75px;
-	border-radius: 10px 10px 10px 10px;
+	border: 5px solid black;
+	border-top: 0px;
+	border-left: 0px;
+	border-radius: 0px 0px 10px 0px;
+	width: 53%;
+	height: 100px;
 	padding:20px;
 	font-size: 50px;
 	font-weight: bolder;
+	background: #E0FFFF;
 	/*img {
 		height: 250px;
 		width: 70%;
 	}*/
 }
+
+.kanann {
+	float:right;
+	margin-right:5%;
+}
+
 .kanan {
 	float:right
 }
@@ -41,49 +73,112 @@ body {
 }
 
 .topcategories {
-	border:2px solid white;
-	border-radius: 10px 10px 10px 10px;
+	border:2px solid black;
+	border-left: 0px;
+	border-radius: 0px 10px 10px 0px;
 	width: 35%;
 	height: 75px;
-	padding: 5px;
+	padding: 0px 0px 0px 0px;
 }
 
 .topquestions {
-	border:2px solid white;
-	border-radius: 10px 10px 10px 10px;
-	width: 45%;
-	height: 200px;
+	border:2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-radius: 0px 10px 0px 0px;
+	width: 55%;
+	height: 100%;
 	padding: 15px;
 	font-size: 18px;
 	color: red;
-
-}
-
-.ratafoto {
-	margin-top: 60px;
+	background: BlanchedAlmond;	
 	float: left;
 }
 
-.warnatext {
+.colomcolom {
+	border: 2px solid black;
+	border-right: 0px;
+	border-radius: 10px 0px 0px 10px;
+	width: 33%;
+	height: 55px;
+	padding: 15px;
+	float: right;
+	margin-bottom: 0px;
+	background: #FFFACD;
+}
+
+.sampingkanan {
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 0px 30px 0px 0px;
+	float: right;
+	width: 30%;
+	height: 270px;
+	padding: 10px;
+}
+
+.besar {
+		font-size: 30px;
+		width: 280px;
+		height: 100px;
+}
+
+.kecil {
+	width: 100px;
+		height: 100px;
+}
+
+ul.ranking {
+	li {
+		float: left;
+		list-style-type: none;
+	}
+}
+
+.ratafoto {
+	margin-top: 50px;
+	float: left;
+}
+
+.ratafoto2 {
+	margin-top: 12px;
+	float: left;
+}
+
+.text {
+	font-size: 18px;
 	color: blue;
-	font-size: 20px;
+}
+
+.text2 {
+	font-size: 14px;
+	color: blue;
+}
+
+.bendera {
+	margin: 15px 0px 15px 0px;
+	img {
+		height: 50px;
+		width: 100%;
+	}
 }
 
 .size {
 	float:left;
 	margin:10px;
 	img {
-		height: 250px;
-		width: 250px;
+		height: 165px;
+		width: 165px;
 	}
 }
 
-.size1 {
+.size2 {
 	float:left;
 	margin:10px;
+	margin-left: 35px;
 	img {
-		height: 50px;
-		width: 50px;
+		height: 75px;
+		width: 75px;
 	}
 }
 
@@ -92,9 +187,16 @@ body {
 }
 
 div#satu {
+	border: 2px solid black;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-radius: 0px 10px 0px 0px;
 	color: red;
 	font-weight: bolder;
 	font-size: 20px;
+	padding: 2px;
+	background: lawngreen;
 }
 
 div#dua {
@@ -107,7 +209,7 @@ div#dua {
 
 .category1 {
 	margin: 5px;
-	background-color: #7FFFD4;
+	background-color: khaki;
 	padding: 3px;
 }
 
@@ -119,10 +221,11 @@ a.category1:hover {
 	float: left;
 	font-size: 18px;
 	line-height: 34px;
-	margin-bottom: 0px;
+	margin-left: 2%;
 	color: red;
 }
 
 #navbar {
+	margin-top: 40px;
 	float: right;
 }
