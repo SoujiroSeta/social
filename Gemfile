@@ -26,6 +26,7 @@ gem 'devise'
 gem 'friendly_id'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass', '~> 2.3.2.0'
+gem 'carrierwave'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -40,3 +41,7 @@ gem 'bootstrap-sass', '~> 2.3.2.0'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+	gem 'mailcatcher'
+end

@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable, :confirmable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :remember_me, :image
   has_many :questions 
   has_many :comments
   has_and_belongs_to_many :groups
@@ -20,4 +20,6 @@ class User < ActiveRecord::Base
   def name
   	"#{first_name} #{last_name}"
   end
+  
+  mount_uploader :image, UserImageUploader
 end

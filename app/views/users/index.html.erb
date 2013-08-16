@@ -33,18 +33,19 @@
 		</ul>
 		<div style='clear:both'></div>
 		<ul class='ranking'>
-			<% 25.times do |rank| %>
-				<% if rank == 0 %>
+			<% @users.each do |user| %>
+				<% if user.id == 1 %>
 					<li>
 						<div>
 							<div class='besar'>
 								<div class='size'>
-									<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
+									<%= image_tag user.image_url, class: 'img-circle' %>
 								</div>
 								<div class='ratafoto'>
-									<div class='text'>username</div><br>
+									<div class='text'><%= user.name %></div><br>
 									<div class='text'>reputation</div><br>
 									<div class='text'>tags</div>
+									<%= link_to 'Edit', edit_user_registration_path if user_signed_in? && current_user == user %>
 								</div>
 							</div>
 						</div>
@@ -54,12 +55,13 @@
 						<div>
 							<div>
 								<div class='size2'>
-									<%= image_tag '/assets/dragon.jpg', class: 'img-circle' %>
+									<%= image_tag user.image_url, class: 'img-circle' %>
 								</div>
 								<div class='ratafoto2'>
-									<div class='text2'>username</div>
+									<div class='text2'><%= user.name %></div><br>
 									<div class='text2'>reputation</div>
 									<div class='text2'>tags</div>
+									<%= link_to 'Edit', edit_user_registration_path if user_signed_in? && current_user == user %>
 								</div>
 							</div>
 						</div>

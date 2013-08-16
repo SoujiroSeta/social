@@ -1,31 +1,30 @@
 <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  
-	  <div class='kanan', style='margin:10px;'>
-	  	<input type="text" class="form-control" placeholder="Enter Email">
-	  	<input type="password" class="form-control" placeholder="Password">
-	  	<div style='clear:both'>
-	  </div>
-	  	
-	  <div class='kanan'>
-	  	<%= f.submit "Sign in" %>
-	  </div>
+  <div >
+	  <div class='signin', style='margin:10px;'>
+	  	<div>
+   		 <%= f.email_field :email, placeholder: 'Email' %>
+   		 <%= f.password_field :password, placeholder: 'Password' %>
+ 		  </div>
+	  		<div style='clear:both'></div>
+	  	<div class='kanan'>
+	  		<%= f.submit "Sign in" %>
+	  	</div>
 			 <div class='margintb'>
 				<% if devise_mapping.rememberable? -%>
   			<%= f.check_box :remember_me %>
-    </div>
-    <div>
-    	<%= f.label :remember_me %>
- 		</div>
-    
-    <p>
-    	<a href="" >Daftar Baru</a> atau Masuk Menggunakan
-    </p>
+    	</div>
+    	<div>
+    		<%= f.label :remember_me %>
+ 			</div>
+   	 	<p  style='margin-top:10;'>
+    		<a href="/" >Daftar Baru</a> atau Masuk Menggunakan
+    	</p>
   		<% end -%>
-  	<div style='clear:both'></div>
+  		<div style='clear:both'></div>
   		<%= render "devise/shared/links" %>
-
+	</div>
 		<% end %>
 
 
