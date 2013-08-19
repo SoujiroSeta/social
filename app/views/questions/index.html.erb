@@ -11,16 +11,15 @@
 			<div>		
 				<ul class="nav nav-pills">
 	  			<li >
-	    			<a href="/">Questions</a>
+	    			<a href="#">Questions</a>
 	 		 	 </li>
 	 		 	 <li class="active">
-	 		  		<a href="/users">Users</a>
+	 		  		<a href="#">Users</a>
 	 			  </li>
 	  			<li>
 	  				<a href="#">Tags</a>
 	  			</li>
 				</ul>
-				<% end %>	
 			</div>
 		</div>
 		<div style='clear:both'></div>
@@ -68,11 +67,8 @@
 
 					<%= link_to "View #{question.total_view.to_i} times", 
 					question_path(question), id: :category, class: :kanan %>
-
-
 				</div><br>
 			<% end %>
-				
 		</div>
 		<div class='sampingkanan'>
 			<div class=''>Nulla volutpat aliquam velit</div>
