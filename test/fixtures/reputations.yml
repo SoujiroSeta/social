@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  message: MyString
+  user_id: 1
+  from_id: 1
+  point: 1
+
+two:
+  message: MyString
+  user_id: 1
+  from_id: 1
+  point: 1

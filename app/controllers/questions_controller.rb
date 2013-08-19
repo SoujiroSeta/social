@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
+		@question.update_total_view
 	end
 
 	def new

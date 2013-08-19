@@ -1,8 +1,13 @@
 <div style='padding:20px;'>
 	<br>
+	<div >
+		<%= image_tag @question.user.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari pertanyaan-->
+	</div>
 		<h1>
 		<%= @question.title %>
 		</h1>
+		<div style='clear:both;'></div>
+		<p><%= @question.user.name %></p>
 	<br>
 <div class='quest1'>
 	<p>
@@ -20,6 +25,22 @@
 		<% end %>
 	</ul>
 </div>
+<br>
+<div style='float:right; margin-right:170px;'>
+	<h4>Related Question</h4>
+		<% @question.tags.each do |tag| %>
+			<ul>
+				<% tag.taggings.random(5).each do |t| %>
+					<% if t.taggable != @question %>
+						<li>
+							<%= link_to t.taggable.title, question_path(t.taggable) %>
+								</li>
+				  <% end %>
+				<% end %>		
+			</ul>
+		<% end %>
+</div>
+	
 		<div style='clear:both'></div>
 	<%	 if user_signed_in? && @question.user == current_user %>
 		<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary' %>
@@ -34,7 +55,7 @@
 		<% end %>
 
 		<ul class='comments'>
-			<% @question.comments.each do |comment| %>
+			<% @question.comments.each_with_index do |comment, i| %>
 				<li><br>
 					<div id='comenter'>
 						<tr>
@@ -45,10 +66,34 @@
 						</tr>
 					</div>
 					<p> <%= comment.message %></p>
+
+					<% if comment.user != current_user %>
+					<%= link_to "#reputation_#{i}", class: 'btn btn-success', data: { toggle: :modal } do %>
+						<%= comment.user.reputations.count %>
+				    <i class='icon-heart'></i>
+				  <% end %>
+
+				  <% end %>
+
+				  <div id='reputation_<%= i %>' class= "modal hide fade modalbox" tabindex= "-1" role= "dialog" >
+				  	<%= form_for comment.user.reputations.new(user: comment.user), remote: true, fromat: :js do |f| %>
+				  		<%= f.hidden_field :user_id%>
+				  		<div style='margin: 10px;'>
+				  			<h4>Reputations From</h4>
+				  			<table>
+				  				<tr>
+				  					<td><%= f.text_area :message, style: 'width: 520px; height: 150px;' %></td>
+				  				</tr>
+				  				<tr>
+				  					<td><%= f.submit 'kasih dahh', class: 'btn btn-primary'%></td>
+				  				</tr>
+				  			</table>
+				  		</div>
+				  	<% end %>
+				  </div>
 				</li>
 				<% end %>
 		</ul>
-
 		<% if user_signed_in? %>
 			<%= form_for current_user.comments.build(commentable: @question) do |f| %>
 				<%= f.hidden_field :commentable_id %>

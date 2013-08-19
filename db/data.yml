@@ -24,6 +24,20 @@ comments:
     - 2013-08-12 06:34:56.000000000 Z
     - 2013-08-12 06:34:56.000000000 Z
     - 
+  - - 8
+    - Question
+    - 10
+    - kerja kerja, jgn ngegame terus !!!
+    - 2013-08-19 03:22:26.000000000 Z
+    - 2013-08-19 03:22:26.000000000 Z
+    - 8
+  - - 9
+    - Question
+    - 10
+    - aaaaaaaaaaaa
+    - 2013-08-19 03:23:14.000000000 Z
+    - 2013-08-19 03:23:14.000000000 Z
+    - 8
 
 ---
 groups:
@@ -56,41 +70,34 @@ questions:
   - created_at
   - updated_at
   records: 
-  - - 1
-    - How to build house
-    - panggil kuli
-    - 1
-    - how-to-build-house
-    - 2013-08-01 08:53:29.000000000 Z
-    - 2013-08-12 04:15:16.000000000 Z
-  - - 3
-    - ask PHP
-    - tanya donk
-    - 1
-    - ask-php
-    - 2013-08-01 09:03:05.000000000 Z
-    - 2013-08-01 09:05:16.000000000 Z
-  - - 4
-    - bagaimana caranya tdur nyenyak?
-    - beberapa hari ini saya gabisa tidur, tolongin donk
-    - 1
-    - bagaimana-caranya-tdur-nyenyak
-    - 2013-08-02 02:31:27.000000000 Z
-    - 2013-08-02 02:31:27.000000000 Z
-  - - 8
-    - ! 'how to earn money '
-    - kerja donk!!
-    - 
-    - how-to-earn-money
-    - 2013-08-12 04:38:34.000000000 Z
-    - 2013-08-12 04:38:34.000000000 Z
-  - - 9
-    - ini tuh kenapa sih?
-    - bla bla bla bla bla
-    - 
-    - ini-tuh-kenapa-sih
-    - 2013-08-13 04:11:50.000000000 Z
-    - 2013-08-13 04:11:50.000000000 Z
+  - - 10
+    - makan tidur
+    - bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing
+      >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun
+      >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing >> makan
+      >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan
+      >> browsing >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur
+      >> bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing
+      >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun
+      >> makan >> browsing >> makan >> tidur >>
+    - 8
+    - makan-tidur
+    - 2013-08-19 02:30:17.000000000 Z
+    - 2013-08-19 02:33:06.000000000 Z
+  - - 11
+    - olahraga
+    - joging, fitness, swimming
+    - 8
+    - olahraga
+    - 2013-08-19 04:00:24.000000000 Z
+    - 2013-08-19 04:00:24.000000000 Z
+  - - 12
+    - Bernyawa
+    - asdasdasd
+    - 8
+    - bernyawa
+    - 2013-08-19 04:00:53.000000000 Z
+    - 2013-08-19 04:27:02.000000000 Z
 
 ---
 taggings:
@@ -104,30 +111,38 @@ taggings:
   - context
   - created_at
   records: 
-  - - 1
-    - 1
+  - - 4
     - 4
+    - 10
     - Question
     - 
     - 
     - tags
-    - 2013-08-02 02:31:27.000000000 Z
-  - - 2
-    - 2
-    - 4
+    - 2013-08-19 02:30:17.000000000 Z
+  - - 5
+    - 5
+    - 10
     - Question
     - 
     - 
     - tags
-    - 2013-08-02 02:31:27.000000000 Z
-  - - 3
-    - 3
+    - 2013-08-19 02:30:17.000000000 Z
+  - - 6
     - 4
+    - 11
     - Question
     - 
     - 
     - tags
-    - 2013-08-02 02:31:27.000000000 Z
+    - 2013-08-19 04:00:24.000000000 Z
+  - - 8
+    - 4
+    - 12
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-08-19 04:27:02.000000000 Z
 
 ---
 tags:
@@ -141,6 +156,12 @@ tags:
     - kurang tidur
   - - 3
     - mata panda
+  - - 4
+    - hidup sehat
+  - - 5
+    - bergadang
+  - - 6
+    - hidup
 
 ---
 users:
@@ -180,9 +201,9 @@ users:
     - 
     - 
     - 
-    - 8
+    - 9
+    - 2013-08-19 01:55:04.000000000 Z
     - 2013-08-18 10:17:18.000000000 Z
-    - 2013-08-16 07:00:37.000000000 Z
     - 127.0.0.1
     - 127.0.0.1
     - 
@@ -194,7 +215,7 @@ users:
     - 
     - 
     - 2013-08-16 03:40:44.000000000 Z
-    - 2013-08-18 10:17:18.000000000 Z
+    - 2013-08-19 01:55:04.000000000 Z
     - faggot.jpg
   - - 9
     - adli@adli.com
@@ -230,8 +251,8 @@ users:
     - 
     - 
     - 
-    - 1
-    - 2013-08-16 07:54:58.000000000 Z
+    - 2
+    - 2013-08-19 04:36:07.000000000 Z
     - 2013-08-16 07:54:58.000000000 Z
     - 127.0.0.1
     - 127.0.0.1
@@ -244,7 +265,7 @@ users:
     - 
     - 
     - 2013-08-16 07:54:47.000000000 Z
-    - 2013-08-16 07:55:24.000000000 Z
+    - 2013-08-19 04:36:07.000000000 Z
     - 969437_4378965130865_1480453819_n.jpg
   - - 11
     - aa@as.com

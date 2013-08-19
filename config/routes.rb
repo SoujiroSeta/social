@@ -10,4 +10,5 @@ Social::Application.routes.draw do
   resources :comments
   resources :groups
  	resources :tags
+ 	resources :reputations
 end

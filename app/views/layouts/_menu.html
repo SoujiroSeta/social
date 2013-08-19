@@ -19,7 +19,22 @@
         <ul class="nav pull-right">
           <% if user_signed_in? %>
             <li class="dropdown">
-              <%= link_to 'My Profile', edit_user_registration_path %>
+              <%= link_to '#', data: {toggle: :dropdown} do %>
+                <%= current_user.name %>
+                <b class='caret'></b>
+              <% end %>
+              <ul class='dropdown-menu'>
+                <li class='dropdown' >
+                  <%= link_to 'Edit Prifile', edit_user_registration_path %>
+                </li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to 'Log Out', destroy_user_session_path, method: :delete%>
+                  <% else %>
+                    <%= link_to 'Login', new_user_session_path%>
+                  <% end %>
+                </li>
+              </ul>
             </li>
             <li class="dropdown">
               <%= link_to 'Posting Question', new_question_path %>
@@ -29,13 +44,7 @@
               <a href="/users/sign_up">Sign Up</a>
             </li>
           <% end %>
-          <li>
-            <% if user_signed_in? %>
-              <%= link_to 'Log Out', destroy_user_session_path, method: :delete%>
-            <% else %>
-              <%= link_to 'Login', new_user_session_path%>
-            <% end %>
-          </li>
+          
         </ul> 
       </div>
     </div>

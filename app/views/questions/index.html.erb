@@ -10,16 +10,17 @@
 		<div class='colomcolom'>
 			<div>		
 				<ul class="nav nav-pills">
-	  			<li class="active">
-	    			<a href="#">Questions</a>
+	  			<li >
+	    			<a href="/">Questions</a>
 	 		 	 </li>
-	 		 	 <li>
-	 		  		<a href="#">Users</a>
+	 		 	 <li class="active">
+	 		  		<a href="/users">Users</a>
 	 			  </li>
 	  			<li>
 	  				<a href="#">Tags</a>
 	  			</li>
 				</ul>
+				<% end %>	
 			</div>
 		</div>
 		<div style='clear:both'></div>
@@ -51,70 +52,27 @@
 		</ul>
 		<div style='clear:both'></div>
 		<div class='topquestions'>
-			<div><a href="">[ASK] cara menggunakan dreamweaver</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div><br>	
-				<div><a href="">Cara memasukan database di Visual Basic.net</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
+			<% @questions.each do |question| %>
+				<div>
+					<%= link_to question.title, question_path(question) %>
 				</div><br>
-				<div><a href="">Cara install linux menjadi dual boot dengan win 7</a></div><br>
+
 				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div><br>	
-				<div><a href="">Bagaimana cara mengatasi kumputer yang gagal booting</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
+					<p style='float:left; margin-right:70px;'><%= link_to question.user.name, user_path(question.user) %></p>
+					<% question.tags.each do |tag| %>
+						<%= link_to tag.name, tag_path(tag), style: '', class: :category1 %>
+					<% end %>
+
+					<%= link_to "Answer #{question.comments.count}", 
+					question_path(question), id: :category, class: :kanan %>
+
+					<%= link_to "View #{question.total_view.to_i} times", 
+					question_path(question), id: :category, class: :kanan %>
+
+
 				</div><br>
-				<div><a href="">Lorem Ipsum Dolor Sit Amet</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div><br>	
-				<div><a href="">Consectetur adipiscing elit</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div><br>	
-				<div><a href="">Integer molestie lorem at massa</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div><br>	
-				<div><a href="">Facilisis in pretium nisl aliquet</a></div><br>
-				<div id='dua'>
-					<a style='margin-right:50px' href="">screamvoidz</a>
-					<a class='category1' style='margin-right:60px' href="">tag</a>
-					<a id='category' class='kanan' href="">Answer</a>
-					<a id='category' class='kanan' href="">View</a>
-					<a id='category' class='kanan' href="">Vote</a>
-				</div>
+			<% end %>
+				
 		</div>
 		<div class='sampingkanan'>
 			<div class=''>Nulla volutpat aliquam velit</div>
