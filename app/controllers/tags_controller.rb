@@ -3,6 +3,9 @@ class TagsController < ApplicationController
 		return render file "#{Rails.root}/public/404.html"
 	end
 
+	def index
+	end
+  
   def show
   	@tag = ActsAsTaggableOn::Tag.find(params[:id])
   end
