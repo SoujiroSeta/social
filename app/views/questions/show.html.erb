@@ -1,12 +1,64 @@
-<br>
-<h1>
-	<%= @question.title %>
-</h1>
-<br>
-<p>
-	<%= @question.message %>
-</p>
-<br>
-<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary' %>
+<div style='padding:20px;'>
+	<br>
+		<h1>
+		<%= @question.title %>
+		</h1>
+	<br>
+<div class='quest1'>
+	<p>
+		<%= @question.message %>
+	</p>
+</div>
+	<br>
+<div style='margin:10px;'>
+	<p>Tags</p>
+	<ul>
+		<% @question.tags.each do |tag| %>
+		<li>
+			<%= link_to tag.name, tag_path(tag) %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+		<div style='clear:both'></div>
+	<%	 if user_signed_in? && @question.user == current_user %>
+		<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary' %>
+	<% end %>
+	<%= link_to 'Back', questions_path, class: 'btn btn-primary' %>
 
-<%= link_to 'Back', questions_path, class: 'btn btn-primary' %>
+	<div id='comment'>
+		<% if !@question.comments.any? %>
+			<h4>There is no comment, be the first to submit</h4>
+		<% else %>
+			<h4><% pluralize(@question.comments.count, 'Comment') %></h4>
+		<% end %>
+
+		<ul class='comments'>
+			<% @question.comments.each do |comment| %>
+				<li><br>
+					<div id='comenter'>
+						<tr>
+							<td><%= image_tag comment.user.image_url, style: 'height: 50px; width: 50px; margin-right: 10px;' %></td>
+							<td><%= comment.user.name %></td>
+							<td>|</td>
+							<td><%= comment.created_at %></td>
+						</tr>
+					</div>
+					<p> <%= comment.message %></p>
+				</li>
+				<% end %>
+		</ul>
+
+		<% if user_signed_in? %>
+			<%= form_for current_user.comments.build(commentable: @question) do |f| %>
+				<%= f.hidden_field :commentable_id %>
+				<%= f.hidden_field :commentable_type %>
+				<div class='field'>
+					<hr style='width:50%;'>
+					<%= f.label :message %><br>
+					<%= f.text_area :message, style: 'height: 300px; width: 500px;' %>
+				</div>
+				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
+			<% end %>
+		<% end %>
+	</div>

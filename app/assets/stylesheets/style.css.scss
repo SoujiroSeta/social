@@ -3,6 +3,29 @@ body {
 	/*background: gainsboro;*/
 }
 
+.comments {
+	list-style-type: none;
+}
+
+#comenter {
+	clear:both;
+}
+
+.field {
+	margin-top: 50px;
+}
+
+.quest1 {
+	border: 1px solid white; 
+	border-radius: 10px;
+	margin:20px; 
+	margin-left: 0px;
+	margin-right: 50px;
+	width: 650px; 
+	float:left;
+	padding: 10px;
+}
+
 .chat {
 	img {
 		height: 50px;

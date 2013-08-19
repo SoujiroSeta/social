@@ -1,0 +1,12 @@
+<div>
+	<ul class='questions'>
+		<% @tag.taggings.each do |tag| %>
+		<li>
+			<div class='title'>
+				<%= link_to tag.taggable.title, question_path(tag.taggable) %>
+			</div>
+			<div class='message'><%= tag.taggable.message %></div>
+		</li>
+		<% end %>
+	</ul>
+</div> 

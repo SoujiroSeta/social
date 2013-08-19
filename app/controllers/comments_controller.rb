@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	before_filter :authenticate_user!, exect: [:index, :show]
 	def index
 		@comments = Comment.all
 	end
@@ -12,12 +13,10 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		@comment = Comment.new(params[:comment])
-		if @comment.save
-			redirect_to comment_path(@comment)
-		else
-			render :new
-	end
+		@user = current_user
+		@comment = @user.comments.build(params[:comment])
+		@comment.save
+		redirect_to question_path(@comment.commentable)
 	end
 
 	def edit

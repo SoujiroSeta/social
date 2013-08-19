@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+	before_filter :authenticate_user!, exept: [:index, :show]
 	def index
 		@questions = Question.all
 	end
@@ -12,7 +13,8 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		@question = Question.new(params[:question])
+		@user = current_user
+		@question = @user.questions.build(params[:question])
 		if @question.save
 			redirect_to question_path(@question)
 		else

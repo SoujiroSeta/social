@@ -1,4 +1,5 @@
 Social::Application.routes.draw do
+
   devise_for :users
 
   root to: 'questions#index'
@@ -8,5 +9,5 @@ Social::Application.routes.draw do
   resources :questions
   resources :comments
   resources :groups
- 
+ 	resources :tags
 end

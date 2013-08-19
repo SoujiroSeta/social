@@ -1,3 +1,4 @@
+<div style='padding:15px;'>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, multipart: true }) do |f| %>
@@ -10,22 +11,26 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div><%= f.label :password %> <i>(biarkan kosong jika password tidak ingin di rubah)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :konfirmasi_password %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div><%= f.label :password_lama %> <i>(Wajib memasukan password untuk mengkonfirmasi perubahan)</i><br />
     <%= f.password_field :current_password %></div> 
-
-  <%= f.file_field :image %>
-  
-  <div><%= f.submit "Update" %></div>
+    <div> 
+      <%= f.label :avatar %>
+      <%= f.file_field :image %>
+    </div>
+    <br>
+  <div><%= f.submit "Update", class: 'btn btn-primary' %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
-
-<%= link_to "Back", :back %>
+  <%= link_to root_path, class: 'btn' do %>
+    
+    <i class='icon-arrow-left'></i>
+    <span>Back</span>
+  <% end %>
+</div>
