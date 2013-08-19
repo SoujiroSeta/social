@@ -27,6 +27,7 @@ gem 'friendly_id'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'carrierwave'
+gem 'yaml_db'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
