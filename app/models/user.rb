@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_and_belongs_to_many :groups
   has_many :reputations
+  has_many :votes
   
   # validates_length :password, minimum: 5, maximum: 64, on: :create
   # validates_uniqueness_of :email, :password

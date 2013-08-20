@@ -66,11 +66,14 @@
 						</tr>
 					</div>
 					<p> <%= comment.message %></p>
-
 					<% if comment.user != current_user %>
 					<%= link_to "#reputation_#{i}", class: 'btn btn-success', data: { toggle: :modal } do %>
 						<%= comment.user.reputations.count %>
-				    <i class='icon-heart'></i>
+				    <i class='icon-star'></i>
+				  <%= link_to root_path, class: 'btn btn-danger' do %>
+				    <i class='icon-star-empty'></i>
+				  <% end %>
+
 				  <% end %>
 
 				  <% end %>

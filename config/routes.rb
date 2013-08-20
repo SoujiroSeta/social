@@ -1,8 +1,11 @@
 Social::Application.routes.draw do
 
+  resources :votes
+
+
   devise_for :users
 
-  root to: 'questions#index'
+  root to: 'home#index'
 
   resources :home
   resources :users
