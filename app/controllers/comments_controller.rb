@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+	class CommentsController < ApplicationController
 	before_filter :authenticate_user!, exect: [:index, :show]
 	def index
 		@comments = Comment.all

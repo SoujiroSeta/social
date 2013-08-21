@@ -67,14 +67,21 @@
 					</div>
 					<p> <%= comment.message %></p>
 					<% if comment.user != current_user %>
-					<%= link_to "#reputation_#{i}", class: 'btn btn-success', data: { toggle: :modal } do %>
-						<%= comment.user.reputations.count %>
-				    <i class='icon-star'></i>
-				  <%= link_to root_path, class: 'btn btn-danger' do %>
-				    <i class='icon-star-empty'></i>
-				  <% end %>
+						<%= link_to "#reputation_#{i}", class: 'btn btn-success', data: { toggle: :modal } do %>
+							<%= comment.user.reputations.count %>
+					    <i class='icon-heart'></i>
+					  <% end %>
+					  &nbsp;
+					  <%= link_to votes_path(comment_id: comment.id), class: 'btn btn-info', method: :post do %>
+					  	<%= comment.votes.where(vote_status: 'LIKE').count %>
+					    <i class='icon-thumbs-up'></i>
+					  <% end %>
 
-				  <% end %>
+					  &nbsp;
+					  <%= link_to vote_path(comment_id: comment.id), class: 'btn btn-danger', method: :delete do %>
+					    <%= comment.votes.where(vote_status: 'DISLIKE').count %>
+					    <i class='icon-thumbs-down'></i>
+					  <% end %>
 
 				  <% end %>
 
