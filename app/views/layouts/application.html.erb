@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class='bottomleft'><img src="/assets/indo.png" border="0"></div>
+	<div class='bottomleft'><img src="/assets/indo.png" ></div>
 		<%= render 'layouts/menu' %>
 	<div class='container container2'>
-
 	<%= yield %>
+	
 		<%= audio_tag '/assets/HARUKA.ogg', autoplay: true %>
+		<hr>
+
 	</div>
 </body>
 </html>

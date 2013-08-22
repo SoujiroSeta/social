@@ -4,6 +4,7 @@ class TagsController < ApplicationController
 	end
 
 	def index
+		@tags = ActsAsTaggableOn::Tag.all
 	end
   
   def show

@@ -1,6 +1,13 @@
 body {
-	background: image-url('/assets/goresan.jpg');
-	/*background: gainsboro;*/
+	/*background: image-url();*/
+	background: #1E1E1E;
+
+}
+
+.slide {
+	width: 600px;
+	height: 200px;
+	margin: 35px;
 }
 
 .comments {
@@ -41,12 +48,8 @@ body {
 	}
 
 .container2 {
-	border: 5px solid black;
-	border-radius: 10px 10px 0px 0px;
 	margin-top: 80px;
 	margin-bottom: 40px;
-	width: 80%;	
-	background: #C0C0C0 ;
 }
 
 #banner {
@@ -103,37 +106,26 @@ body {
 
 .topcategories {
 	border:2px solid black;
-	border-left: 0px;
-	border-radius: 0px 10px 10px 0px;
+	border-radius: 20px;
 	width: 35%;
 	height: 75px;
-	padding: 0px 0px 0px 0px;
 }
 
 .topquestions {
-	border:2px solid black;
-	border-left: 0px;
-	border-bottom: 0px;
-	border-radius: 0px 10px 0px 0px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	border-radius: 20px;
 	width: 55%;
-	height: 100%;
-	padding: 15px;
-	font-size: 18px;
-	color: red;
+	padding: 30px;
+	font-size: 20px;
 	background: BlanchedAlmond;	
 	float: left;
 }
 
 .colomcolom {
-	border: 2px solid black;
-	border-right: 0px;
-	border-radius: 10px 0px 0px 10px;
-	width: 33%;
-	height: 55px;
-	padding: 15px;
-	float: right;
-	margin-bottom: 0px;
-	background: #FFFACD;
+		float: right;
+	
+	
 }
 
 .sampingkanan {
@@ -201,6 +193,17 @@ ul.ranking {
 	}
 }
 
+.carousel-control {
+	margin-top:0px;
+}
+
+.picslide {
+	img {
+		height: 230px;
+		width: 600px;
+	}
+}
+
 .size2 {
 	float:left;
 	margin:10px;
@@ -220,12 +223,21 @@ div#satu {
 	border-top: 0px;
 	border-right: 0px;
 	border-left: 0px;
-	border-radius: 0px 10px 0px 0px;
-	color: red;
+	border-radius: 20px 20px 0px 0px;
+	color: black;
 	font-weight: bolder;
 	font-size: 20px;
 	padding: 2px;
-	background: lawngreen;
+	background: #437C01;
+}
+
+.tag {
+	margin-top: 10px;
+	height: 21px;
+	width: 100px;
+	border: 1px solid white;
+	padding: 0px;
+	background: khaki;
 }
 
 div#dua {

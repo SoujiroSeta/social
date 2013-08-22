@@ -1,2 +1,9 @@
 <%= render 'layouts/locations' %>
 
+<div>
+	<% @tags.each do |tags| %>
+	<div class='tag '>
+		<%= link_to tags.name, tag_path(tags) %>
+	</div>
+	<% end %>
+</div>
