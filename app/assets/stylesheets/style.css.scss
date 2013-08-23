@@ -4,6 +4,13 @@ body {
 
 }
 
+.fb {
+	img {
+		width: 150px;
+		height: 30px;
+	}
+}
+
 .slide {
 	width: 600px;
 	height: 200px;
@@ -45,6 +52,7 @@ body {
 	bottom: 0px;
 	left: 0px;
 	clip: inherit;
+	z-index: 1000;
 	}
 
 .container2 {
@@ -184,6 +192,7 @@ ul.ranking {
 	}
 }
 
+
 .size {
 	float:left;
 	margin:10px;
@@ -194,12 +203,12 @@ ul.ranking {
 }
 
 .carousel-control {
-	margin-top:0px;
+	margin-top:30px;
 }
 
 .picslide {
 	img {
-		height: 230px;
+		height: 270px;
 		width: 600px;
 	}
 }
@@ -212,6 +221,17 @@ ul.ranking {
 		height: 75px;
 		width: 75px;
 	}
+}
+
+.footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	img {
+		width: 100%;
+		height: 100px;
+	}
+
 }
 
 #questionattr {

@@ -3,5 +3,6 @@
 	*= require bootstrap-responsive
 	*= require style
 	*= require session
+	*= require newquestion
  */
 

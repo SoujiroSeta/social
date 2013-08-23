@@ -1,9 +1,13 @@
 <div class='row-fluid'>
 	<div class='span-8'>
 		<div style='padding:15px;'>
-		<h1>New Question</h1>
+		<h1 class='textcolor'>New Question</h1>
+		<div class='picquest'>
+			<%= image_tag '/assets/askquest.png' %>
+		</div>
 		<%= render 'form' %>
 		<%= link_to 'Cancel', questions_path, class: 'btn btn-primary' %>
 		</div>
+
 	</div>
 </div>

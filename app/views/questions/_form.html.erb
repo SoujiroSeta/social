@@ -9,28 +9,30 @@
 	<% end %>
 
 <%= form_for @question do |f| %>
-<table>
+<table class='textcolor' >
 	<tr>
 		<td>Title</td>
 		<td>:</td>
-		<td><%= f.text_field :title, style:'width:400px;' %></td>
+		<td><%= f.text_field :title, class: 'titlesize'%></td>
 	</tr>
 
 	<tr>
 		<td>Message</td>
 		<td>:</td>
-		<td><%= f.text_area :message, style: 'width:500px; height:200px;' %></td>
+		<td><%= f.text_area :message, class: 'messagesize' %></td>
 	</tr>
 	<tr>
 		<td>Tag</td>
 		<td>:</td>
-		<td><%= f.text_field :tag_list %>
+		<td><%= f.text_field :tag_list, class: 'tagsize' %>
+			<p class='insert'>insert category</p>
+		 </td>
 	</tr>
 
 	<tr>
 		<td></td>
 		<td></td>
-		<td><%= f.submit %>
+		<td><%= f.submit style: 'margin-left:10px; float:left;' %> </td>
 	</tr>
 
 </table>
