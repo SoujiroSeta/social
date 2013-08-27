@@ -1,5 +1,7 @@
 Social::Application.routes.draw do
 
+  get "search/index"
+
   resources :votes
 
 
