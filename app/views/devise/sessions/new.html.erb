@@ -1,18 +1,18 @@
-<h2 style='margin-left:25px;'>Sign in</h2>
+<h2 class='title'>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
 <div>
   <div class='signin', style='margin:10px;'>
     <div>
-       <%= f.email_field :email, placeholder: 'Email' %>
+       <%= f.text_field :email, placeholder: 'Email' %>
        <%= f.password_field :password, placeholder: 'Password' %>
     </div>
 
     <div style='clear:both'></div>
 
     <div class='kanan'>
-      <%= f.submit "Sign in" %>
+      <%= f.submit "Sign in", class: 'btn btn-primary' %>
     </div>
 
     <div class='margintb'>
@@ -24,18 +24,22 @@
       <%= f.label :remember_me %>
     </div>
 
-    <p  style='margin-top:10;'>
-      <a href="/" >Daftar Baru </a> atau Masuk Menggunakan
+    <p  class='loginusing'>
+      <a href="/">Sign Up</a> or Login Using
     </p>
 
     <div class='fb'>
       <%= link_to image_tag '/assets/fblogo.png' %>
-    </div><br>
+    </div>
+    <div class='twitter'>
+      <%= link_to image_tag '/assets/twitterlogo.png' %>
+    </div>
+    <br>
 
     <% end -%>
 
     <div style='clear:both'></div>
-
+    <div style='margin-top:30px;'></div>
     <%= render "devise/shared/links" %>
   </div>
   <% end %>

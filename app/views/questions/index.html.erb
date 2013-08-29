@@ -3,7 +3,6 @@
 	<div class='span-8'>
 		<%= render 'layouts/locations' %>
 
-		<div style='clear:both'></div>
 		<div class='topcategories'>
 			<center>
 				<div id='satu'>
@@ -13,8 +12,6 @@
 			<br>
 			<center>
 				<div id='dua'>
-					<a id='category' href="#">Category</a>
-					<a id='category' href="#">Category</a>
 					<a id='category' href="#">Category</a>
 					<a id='category' href="#">Category</a>
 					<a id='category' href="#">Category</a>
@@ -38,9 +35,11 @@
 				</div><br>
 
 				<div id='dua'>
-					<p style='float:left; margin-right:70px;'><%= link_to question.user.name, user_path(question.user) %></p>
+					<p style='float:left; margin-right:70px;'>
+						<%= link_to question.user.name, user_path(question.user) %>
+					</p>
 					<% question.tags.each do |tag| %>
-						<%= link_to tag.name, tag_path(tag), style: '', class: :category1 %>
+						<%= link_to tag.name, tag_path(tag), class: :category1 %>
 					<% end %>
 
 					<%= link_to "Answer #{question.comments.count}", 
@@ -52,7 +51,9 @@
 			<% end %>
 		</div>
 		<div class='sampingkanan'>
-			<div class=''>Nulla volutpat aliquam velit</div>
+			<div class=''>
+				
+			</div>
 		</div>	
 	</div>
 </div><hr>

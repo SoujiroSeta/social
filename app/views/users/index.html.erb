@@ -3,7 +3,7 @@
 <div class='row-fluid'>
 	<div class='span-8'>
 		<%= render 'layouts/locations' %>
-		<br><br><br><br>
+		
 	</div>
 		<h1 id='judul'>Users</h1>
 		<ul id='navbar' class="nav nav-tabs">
@@ -24,7 +24,7 @@
 									<%= image_tag user.image_url, class: 'img-circle' %>
 								</div>
 								<div class='ratafoto'>
-									<div class='text'><%= user.name %></div><br>
+									<div class='text'><%= link_to user.name, user_path(user) %></div><br>
 									<div class='text'>reputation</div><br>
 									<div class='text'>tags</div>
 									<%= link_to 'Edit', edit_user_registration_path if user_signed_in? && current_user == user %>
@@ -40,7 +40,7 @@
 									<%= image_tag user.image_url, class: 'img-circle' %>
 								</div>
 								<div class='ratafoto2'>
-									<div class='text2'><%= user.name %></div><br>
+									<div class='text2'><%= link_to user.name, user_path(user) %></div><br>
 									<div class='text2'>reputation</div>
 									<div class='text2'>tags</div>
 									<%= link_to 'Edit', edit_user_registration_path if user_signed_in? && current_user == user %>

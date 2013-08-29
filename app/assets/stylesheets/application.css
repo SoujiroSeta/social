@@ -1,8 +1,10 @@
 /*
  	*= require bootstrap
 	*= require bootstrap-responsive
-	*= require style
+	*= require stylebebas
 	*= require session
 	*= require newquestion
+	*= require registration
+	*= require userstyle
  */
 

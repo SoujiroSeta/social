@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821090341) do
+ActiveRecord::Schema.define(:version => 20130829080455) do
 
   create_table "comments", :force => true do |t|
     t.string   "commentable_type"
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20130821090341) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "image"
+    t.string   "username"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
@@ -107,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20130821090341) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
   add_index "users", ["unlock_token"], :name => "index_users_on_unlock_token", :unique => true
+  add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
   create_table "votes", :force => true do |t|
     t.integer  "user_id"

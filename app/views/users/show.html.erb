@@ -1,2 +1,27 @@
-<p><%= @user.email %></p>
-<p><%= image_tag @user.image_url %></p>
+<%= render 'layouts/menu' %>
+
+<div class='row-fluid'>
+	<div class='span-8'>
+		<%= render 'layouts/locations' %>
+		
+		<%= image_tag @user.image_url, class: 'image' %>
+
+		<table>
+			<tr>
+				<td>Username</td>
+				<td>: &nbsp; </td>
+				<td><%= @user.username %></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>: &nbsp; </td>
+				<td><%= @user.name %></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>: &nbsp; </td>
+				<td><%= @user.email %></td>
+			</tr>
+		</table>
+	</div>
+</div>

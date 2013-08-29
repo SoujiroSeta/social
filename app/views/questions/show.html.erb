@@ -1,7 +1,7 @@
 <div style='padding:20px;'>
 	<br>
 	<div >
-		<%= image_tag @question.user.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari pertanyaan-->
+		<%= image_tag @question.user.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari pertanyaan user -->
 	</div>
 		<h1>
 		<%= @question.title %>
@@ -115,5 +115,7 @@
 				</div>
 				<%= f.submit 'Submit Comment', class: 'btn btn-primary' %>
 			<% end %>
+		<% else %>
+			<h4 style='margin: 10px 0px 10px 0px;'>Please <%= link_to 'Login', new_user_session_path%> For Submit Comment</h4>
 		<% end %>
 	</div>

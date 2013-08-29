@@ -1,24 +1,19 @@
 <div class="navbar navbar-fixed-top" >
-  <div class="navbar-inner  kontener" >
+  <div class="navbar-inner" >
     <div class="container" id="full-screen-backoffice">
       <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Q-Z.com', root_path, class: :brand %>
+      <%= link_to 'Question-Zone', root_path, class: 'brand q-zone' %>
       <div class="nav-collapse">
-        
         <ul class="nav pull-right">
-
-
           <li>
               <%= form_tag search_index_path, method: :get, class: 'navbar-search pull-left', id: 'cari' do %>
                 <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
               <% end %>
           </li>
-
-          
         </ul>
         <ul class="nav pull-right">
           <% if user_signed_in? %>
@@ -29,13 +24,14 @@
               <% end %>
               <ul class='dropdown-menu'>
                 <li class='dropdown' >
-                  <%= link_to 'Edit Prifile', edit_user_registration_path %>
+                  <%= link_to 'Edit Profile', edit_user_registration_path %>
                 </li>
                 <li>
                   <% if user_signed_in? %>
-                    <%= link_to 'Log Out', destroy_user_session_path, method: :delete%>
-                  <% else %>
-                    <%= link_to 'Login', new_user_session_path%>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                      <span>Log Out</span>
+                      <%= image_tag '/assets/logout.png', class: :logout %>
+                    <% end %>  
                   <% end %>
                 </li>
               </ul>
@@ -44,8 +40,11 @@
               <%= link_to 'Posting Question', new_question_path %>
             </li>
             <% else %>
-            <li class="dropdown">
+            <li>
               <a href="/users/sign_up">Sign Up</a>
+            </li>
+            <li>
+              <%= link_to 'Login', new_user_session_path%>
             </li>
           <% end %>
         </ul> 
