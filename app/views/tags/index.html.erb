@@ -2,10 +2,9 @@
 
 <div>
 	<% @tags.each do |tags| %>
-	<div class='tag '>
-		<%= link_to tags.name, tag_path(tags) %>
-	</div>
+	<tr>
+		<td><%= link_to tags.name, tag_path(tags) %></td>
+	</tr>
 	<% end %>
 </div>
 
-<p><%= @tags[0].name %></p>

@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		
+		if current_user != @user
+			@user.update_total_view
+		end
 	end
 
 end

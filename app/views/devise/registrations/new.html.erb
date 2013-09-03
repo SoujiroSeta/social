@@ -21,6 +21,16 @@
   <div>
     <%= f.submit "Sign up" %>
   </div>
+
+  
+  <div id='color' style='margin-top: 10px;'> 
+  <div><%= f.label :My_Avatar %>
+    <%= image_tag resource.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari resource user -->
+  </div>
+      
+      <%= f.file_field :image %>
+  </div>
+  <div style='clear:both;'></div>
 </div>
 <% end %>
 

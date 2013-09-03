@@ -1,0 +1,8 @@
+membuat defaul foto:
+	- App > Uploader > user_image_uploader.rb 
+	- di baris 20 - 25 di aktifkan (uncomment)
+	- tambahkan "/assets/nama_file.jpg"
+
+
+team = Team.find(id)
+

@@ -7,11 +7,11 @@
 		<%= image_tag @user.image_url, class: 'image' %>
 
 		<table>
-			<tr>
+			<!-- <tr>
 				<td>Username</td>
 				<td>: &nbsp; </td>
 				<td><%= @user.username %></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>Name</td>
 				<td>: &nbsp; </td>
@@ -23,5 +23,10 @@
 				<td><%= @user.email %></td>
 			</tr>
 		</table>
+		<%= "View #{@user.total_view.to_i} times" %>
+
+		<div>
+			<%= link_to 'Edit Profile', edit_user_registration_path if user_signed_in? && current_user == @user %>
+		</div>
 	</div>
 </div>

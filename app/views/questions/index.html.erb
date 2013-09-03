@@ -20,16 +20,17 @@
 			</center>
 		</div><br>
 		<h1 id='judul'>Top Question</h1>
-		<ul id='navbar' class="nav nav-tabs">
+		<!-- <ul id='navbar' class="nav nav-tabs">
   		<li class="active">
    			<a href="#">Interest</a></li>
  		 	<li><a href="#">Hot</a></li>
  			<li><a href="#">Week</a></li>
  		 	<li><a href="#">Month</a></li>
-		</ul>
+		</ul> -->
 		<div style='clear:both'></div>
 		<div class='topquestions'>
 			<% @questions.each do |question| %>
+			<div class='toples'>
 				<div>
 					<%= link_to question.title, question_path(question) %>
 				</div><br>
@@ -38,15 +39,18 @@
 					<p style='float:left; margin-right:70px;'>
 						<%= link_to question.user.name, user_path(question.user) %>
 					</p>
+					<i class='icon-tags'></i>
 					<% question.tags.each do |tag| %>
+					
 						<%= link_to tag.name, tag_path(tag), class: :category1 %>
 					<% end %>
-
+					
 					<%= link_to "Answer #{question.comments.count}", 
 					question_path(question), id: :category, class: :kanan %>
 
 					<%= link_to "View #{question.total_view.to_i} times", 
 					question_path(question), id: :category, class: :kanan %>
+				</div>
 				</div><br>
 			<% end %>
 		</div>

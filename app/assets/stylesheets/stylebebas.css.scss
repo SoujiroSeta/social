@@ -11,6 +11,12 @@ body {
 	}
 }
 
+.menu {
+	height: 27px;
+	width: 27px;
+	margin-right: 10px;
+}
+
 img.logout {
 		width: 20px;
 		height: 20px;
@@ -52,8 +58,13 @@ img.logout {
 	margin-top: 50px;
 }
 
-.quest1 {
-	border: 1px solid white; 
+.qtitle {
+	color: white;
+	margin-left: 40px;
+}
+
+.quest1 { 
+	color: white;
 	border-radius: 10px;
 	margin:20px; 
 	margin-left: 0px;
@@ -146,12 +157,17 @@ img.logout {
 .topquestions {
 	margin-bottom: 25px;
 	border-radius: 20px;
-	width: 55%;
+	width: 57%;
 	padding: 30px;
 	font-size: 20px;
 	float: left;
 	overflow-y: scroll;
 	height: 300px;
+}
+
+.toples {
+	border-bottom:1px solid white; 
+	padding-bottom: 2px;
 }
 
 .colomcolom {

@@ -1,31 +1,50 @@
 <div style='padding:15px;'>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Edit Profile</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, multipart: true }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div id='color'> 
+    <div><%= f.label :My_Avatar %>
+      <%= image_tag resource.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari resource user -->
+    </div>
+      
+      <%= f.file_field :image %>
+  </div>
+  
+  <div style='clear:both; margin-bottom:20px;'></div>
+
   <div id='color'><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true %></div><br>
+    <%= f.email_field :email, :autofocus => true %>
+  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div id='color'><%= f.label :password %> <i>(biarkan kosong jika password tidak ingin di rubah)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
-
-  <div id='color'><%= f.label :konfirmasi_password %>
-  <%= f.password_field :password_confirmation %></div><br>
-
-  <div id='color' ><%= f.label :password_lama %>
-    <%= f.password_field :current_password, placeholder: 'wajib di isi untuk konfimasi' %></div> 
-    <div id='color'> 
     <div>
-      <%= image_tag resource.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari pertanyaan user -->
+      Currently waiting confirmation for: <%= resource.unconfirmed_email %>
     </div>
-      <%= f.label :avatar %>
-      <%= f.file_field :image %>
-    </div>
+  <% end %>
+  <div id='color'>
+    <%= f.label :first_name %> 
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %> 
+    <%= f.text_field :last_name %>
+  </div>
+  <div id='color'><%= f.label :password %> 
+    <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, :autocomplete => "off" %>
+  </div>
+
+  <div id='color'><%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div id='color' >
+    <%= f.label :current_password %>
+    <i>(we need your current password to confirmation your changes)</i><br>
+    <%= f.password_field :current_password, placeholder: 'wajib di isi untuk konfimasi' %>
+  </div> 
+
+  
     <br>
   <div class='btn-update'>
     <%= f.submit "Update", class: 'btn btn-primary' %>

@@ -37,7 +37,9 @@
 						<div>
 							<div>
 								<div class='size2'>
-									<%= image_tag user.image_url, class: 'img-circle' %>
+									<%= link_to user_path(user) do %>
+                      <%= image_tag user.image_url, class: 'img-circle' %>
+                    <% end %>  
 								</div>
 								<div class='ratafoto2'>
 									<div class='text2'><%= link_to user.name, user_path(user) %></div><br>

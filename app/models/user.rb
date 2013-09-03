@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
         
-  attr_accessible :email, :password, :password_confirmation, 
+  attr_accessible :email, :password, :password_confirmation, :total_view,
                   :first_name, :last_name, :remember_me, :image, :username
 
   has_many :questions 
@@ -24,6 +24,14 @@ class User < ActiveRecord::Base
   # validates_presence_of :username, :email, :phone on: :create
   def name
   	"#{first_name} #{last_name}"
+  end
+
+  # membuat total view
+  def update_total_view
+    update_attributes(total_view: self.total_view.to_i + 1 )
+    # sama seperti
+    # self.total_view = self.total_view + 1
+    # self.save
   end
   
   mount_uploader :image, UserImageUploader

@@ -1,13 +1,13 @@
 <div style='padding:20px;'>
 	<br>
 	<div >
-		<%= image_tag @question.user.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 10px;' %> <!-- mengambil gambar dari pertanyaan user -->
+		<%= image_tag @question.user.image_url, style: 'height:70px; width: 70px; float:left; margin-right: 25px;' %> <!-- mengambil gambar dari pertanyaan user -->
 	</div>
-		<h1>
+		<h1 class='qtitle'>
 		<%= @question.title %>
 		</h1>
 		<div style='clear:both;'></div>
-		<p><%= @question.user.name %></p>
+		<p style='color:grey;'><%= @question.user.name %></p>
 	<br>
 <div class='quest1'>
 	<p>
@@ -59,7 +59,11 @@
 				<li><br>
 					<div id='comenter'>
 						<tr>
-							<td><%= image_tag comment.user.image_url, style: 'height: 50px; width: 50px; margin-right: 10px;' %></td>
+							<td>
+							<%= link_to user_path(@question.user) do %>
+								<%= image_tag comment.user.image_url, style: 'height: 50px; width: 50px; margin-right: 10px;' %>
+							<% end -%>
+							</td>
 							<td><%= comment.user.name %></td>
 							<td>|</td>
 							<td><%= comment.created_at %></td>
@@ -95,7 +99,7 @@
 				  					<td><%= f.text_area :message, style: 'width: 520px; height: 150px;' %></td>
 				  				</tr>
 				  				<tr>
-				  					<td><%= f.submit 'kasih dahh', class: 'btn btn-primary'%></td>
+				  					<td><%= f.submit 'Fabulous', class: 'btn btn-primary'%></td>
 				  				</tr>
 				  			</table>
 				  		</div>

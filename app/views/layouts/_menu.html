@@ -19,12 +19,14 @@
           <% if user_signed_in? %>
             <li class="dropdown">
               <%= link_to '#', data: {toggle: :dropdown} do %>
+               <%= image_tag current_user.image_url, class: 'menu' %>
                 <%= current_user.name %>
+
                 <b class='caret'></b>
               <% end %>
               <ul class='dropdown-menu'>
                 <li class='dropdown' >
-                  <%= link_to 'Edit Profile', edit_user_registration_path %>
+                  <%= link_to 'My Profile', user_path(current_user.id) %>        
                 </li>
                 <li>
                   <% if user_signed_in? %>
