@@ -1,4 +1,7 @@
 <div class="navbar navbar-fixed-top" >
+  <% if user_signed_in? && current_user.is_admin? %>
+   <%= image_tag '/assets/pirate.png', style: 'width: 40px; height: 40px; float:left; margin-top:4px;' %>
+  <% end %>  
   <div class="navbar-inner" >
     <div class="container" id="full-screen-backoffice">
       <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
@@ -6,10 +9,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <%= link_to 'Question-Zone', root_path, class: 'brand q-zone' %>
       <div class="nav-collapse">
         <ul class="nav pull-right">
           <li>
+
               <%= form_tag search_index_path, method: :get, class: 'navbar-search pull-left', id: 'cari' do %>
                 <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
               <% end %>

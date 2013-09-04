@@ -6,3 +6,32 @@ membuat defaul foto:
 
 team = Team.find(id)
 
+============================================================================================
+
+*>logaritma membuat alerm
+
+
+$(function){
+/*di ekse setelah 5 detik*/
+
+	var interval = 1000
+
+	//alert(cek ke server, apkah ada user id yang login itu ada reminder nya>)
+
+	set interval(function(){
+	var now = new Date();
+
+	ajax ke server buat cek apakah ada sekarang ada reminder buat user yang sedang login
+
+	var response = checktoserver()
+	if(response === 'yes'){
+tampil alert
+}
+},interval);
+
+function checkToServer(){
+
+	isinya ajax ke server
+
+}
+});

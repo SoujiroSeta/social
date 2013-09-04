@@ -18,6 +18,14 @@
     <%= f.email_field :email, :autofocus => true %>
   </div>
 
+  <% if resource.is_admin %>
+    <div>
+      <%= f.label :is_admin %><br>
+      <%= f.check_box :is_admin %>
+    </div>
+  <% end -%>
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>
       Currently waiting confirmation for: <%= resource.unconfirmed_email %>
@@ -28,6 +36,10 @@
     <%= f.text_field :first_name %>
     <%= f.label :last_name %> 
     <%= f.text_field :last_name %>
+    <br>
+    <span>Gender</span>
+    <%= f.radio_button :gender_id, Gender.male.id %>Male
+    <%= f.radio_button :gender_id, Gender.female.id %>Female
   </div>
   <div id='color'><%= f.label :password %> 
     <i>(leave blank if you don't want to change it)</i><br />
@@ -41,7 +53,7 @@
   <div id='color' >
     <%= f.label :current_password %>
     <i>(we need your current password to confirmation your changes)</i><br>
-    <%= f.password_field :current_password, placeholder: 'wajib di isi untuk konfimasi' %>
+    <%= f.password_field :current_password %>
   </div> 
 
   

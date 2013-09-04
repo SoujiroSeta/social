@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130903022608) do
+ActiveRecord::Schema.define(:version => 20130904091612) do
 
   create_table "comments", :force => true do |t|
     t.string   "commentable_type"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(:version => 20130903022608) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.integer  "user_id"
+  end
+
+  create_table "genders", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "groups", :force => true do |t|
@@ -102,6 +108,8 @@ ActiveRecord::Schema.define(:version => 20130903022608) do
     t.string   "username"
     t.integer  "total_view"
     t.boolean  "is_admin",               :default => false
+    t.integer  "gender_id"
+    t.boolean  "super_admin",            :default => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

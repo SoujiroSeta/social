@@ -22,11 +22,19 @@
 				<td>: &nbsp; </td>
 				<td><%= @user.email %></td>
 			</tr>
+			<tr>
+				<td>Gende</td>
+				<td>: &nbsp; </td>
+				<td><%= @user.gender.name %></td>
+			</tr>
 		</table>
 		<%= "View #{@user.total_view.to_i} times" %>
 
 		<div>
 			<%= link_to 'Edit Profile', edit_user_registration_path if user_signed_in? && current_user == @user %>
+
+			<div >
+			</div>
 		</div>
 	</div>
 </div>

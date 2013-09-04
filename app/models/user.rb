@@ -9,13 +9,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
         
   attr_accessible :email, :password, :password_confirmation, :total_view,
-                  :first_name, :last_name, :remember_me, :image, :username
+                  :first_name, :last_name, :remember_me, :image, :username, :gender_id
 
   has_many :questions 
   has_many :comments
   has_and_belongs_to_many :groups
   has_many :reputations
   has_many :votes
+  belongs_to :gender
   
   # validates_length :password, minimum: 5, maximum: 64, on: :create
   # validates_uniqueness_of :email, :password
