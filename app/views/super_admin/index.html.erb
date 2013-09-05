@@ -1,0 +1,27 @@
+<h1>List User</h1>
+
+<table>
+	<tr>
+		<th>Email</th>
+		<th >Name</th>
+		
+		<th>Action</th>
+	</tr>
+
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user.email %></td>
+			<td><%= user.name %></td>
+			<td><%= user.is_admin? ? 'User is admin' : 'User not admin' %></td>
+			<td>
+				<% if user.is_admin? %>
+					<%= link_to 'Remove Admin', super_admin_path(user), method: :delete %>
+				<% else %>
+					<%= link_to 'Make Admin', super_admin_path(user), method: :put %>
+				<% end -%>
+			</td>
+		</tr>
+	<% end -%>
+</table>
+
+

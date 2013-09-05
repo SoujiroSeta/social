@@ -1,4 +1,11 @@
 Social::Application.routes.draw do
+  
+
+  get "super_admin/index"
+
+  get "super_admin/update"
+
+  get "super_admin/destroy"
 
   get "search/index"
 
@@ -9,6 +16,7 @@ Social::Application.routes.draw do
 
   root to: 'questions#index'
 
+  resources :super_admin, only: [:index, :update, :destroy]
   resources :home
   resources :users
   resources :questions

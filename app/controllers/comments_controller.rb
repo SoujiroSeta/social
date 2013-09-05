@@ -34,8 +34,9 @@
 
 	def destroy
 		@comment = Comment.find(params[:id])
-		@comment.destroy
-		redirect_to comments_path
+		@comment.removed = true
+		@comment.save
+		redirect_to question_path(@comment.commentable)
 	end
 
 end

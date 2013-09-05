@@ -31,8 +31,16 @@
 		<div class='topquestions'>
 			<% @questions.each do |question| %>
 			<div class='toples'>
+				
 				<div>
 					<%= link_to question.title, question_path(question) %>
+					<div style='margin-left: 0px;'>
+						<% if user_signed_in? && current_user.is_admin? || current_user.super_admin? %>
+							<%= link_to question_path(question), method: :delete do %>
+							<i  class='icon-remove'></i>
+							<% end -%>
+						<% end -%>
+					</div>
 				</div><br>
 
 				<div id='dua'>

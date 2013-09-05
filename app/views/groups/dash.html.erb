@@ -1,0 +1,27 @@
+<% @question.comments.each do |comment| %>
+  
+
+  <!-- tampilkan comment, tapi filter dulu berdasarkan field removed -->
+  <!-- jika removed, maka di anggap junk comment -->
+
+  <% if comment.removed? %>
+    <p>this comment is removed by admin</p>
+  <% else %>
+    <p><%= comment.message %></p>
+  <% end -%>
+  
+  <!-- jika ada user yang login, dan yang login adalah admin atau super_admin -->
+  <!-- maka tampilkan button delete comment -->
+
+  <% if user_signed_in? && current_user.is_admin? || current_user.super_admin? %>
+    <%= link_to 'Remove Comment', comment_path(comment), method: :delete %>
+  <% end %>
+
+<% end -%>
+
+
+
+
+
+
+

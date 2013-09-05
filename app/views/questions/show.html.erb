@@ -63,13 +63,33 @@
 							<%= link_to user_path(@question.user) do %>
 								<%= image_tag comment.user.image_url, style: 'height: 50px; width: 50px; margin-right: 10px;' %>
 							<% end -%>
+
 							</td>
 							<td><%= comment.user.name %></td>
 							<td>|</td>
 							<td><%= comment.created_at %></td>
 						</tr>
 					</div>
-					<p> <%= comment.message %></p>
+					
+
+					<!-- tampilkan comment, tapi filter dulu berdasarkan field removed -->
+				  <!-- jika removed, maka di anggap junk comment -->
+
+					<% if comment.removed? %>
+					    <p>this comment is removed by admin</p>
+					<% else %>
+					    <p><%= comment.message %></p>
+					<% end -%>
+					  
+					  <!-- jika ada user yang login, dan yang login adalah admin atau super_admin -->
+					  <!-- maka tampilkan button delete comment -->
+
+					<% if user_signed_in? && current_user.is_admin? || current_user.super_admin? %>
+					  <%= link_to 'Remove Comment', comment_path(comment), method: :delete %>
+					<% end %>
+
+
+
 					<% if comment.user != current_user %>
 						<%= link_to "#reputation_#{i}", class: 'btn btn-success', data: { toggle: :modal } do %>
 							<%= comment.user.reputations.count %>
