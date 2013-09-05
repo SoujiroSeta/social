@@ -69,6 +69,15 @@
 		
 		<div class='sampingkanan'>
 			<div class=''>
+				<ol>
+					<% @recent_questions.each do |recent|%>
+						<li>
+							<%= link_to recent.title, question_path(recent) %>
+						</li>
+					<% end -%>	
+				</ol>
+			
+					
 				
 			</div>
 		</div>	
