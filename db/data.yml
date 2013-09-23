@@ -484,7 +484,6 @@ users:
   - is_admin
   - gender_id
   - super_admin
-  - notice
   records: 
   - - 8
     - mm@mm.com
@@ -516,7 +515,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 10
     - agus@agus.com
     - $2a$10$9mO2UijqA3BHD3tlGEtODOKiEhCgm5AnmeOWELINV.yo0M1ewBIlq
@@ -547,7 +545,6 @@ users:
     - false
     - 1
     - true
-    - 
   - - 12
     - soujiroseta@gmail.com
     - $2a$10$ocd0f/7lQlbkuxagJ4oS2OU.Ve6w6rbeSdJL8zvaBYeNC7WnnxCci
@@ -578,7 +575,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 14
     - yunogasai@gmail.com
     - $2a$10$EDi/vKXX7L7GKIViohawIuRRwljFPQitwNjD5JKH5Q5BGJ8.NPYuS
@@ -609,7 +605,6 @@ users:
     - false
     - 2
     - false
-    - 
   - - 16
     - kecoa@gmail.com
     - $2a$10$wmxE5n11gjncWv2FAayUmentVc00EGa85XemnhZzTB7tzLK7uC0QS
@@ -640,7 +635,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 17
     - kucing@gmail.com
     - $2a$10$WgDDSdlWN637HaHIRerI6uXun5qeLgiv5EV9rbjk.zD5xjpBekuyG
@@ -671,7 +665,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 18
     - darkflamemaster@gmail.com
     - $2a$10$GM98H/2.KoGYKq5MSjhFrO9mPAlmjKCK49mce.FybolGTAhbpooHO
@@ -702,7 +695,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 20
     - hollow@gmail.com
     - $2a$10$rmVkbzWTz1x/DZpB7M4d5eCidpOBHOirKVsIwtad5Z9NWxucc50P6
@@ -733,7 +725,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 21
     - budi@gmail.com
     - $2a$10$iCdTjCvMm9U7kd1.PJkyWeWwmZObX/1b2HIzUewDMR7usqkVFZBPu
@@ -764,7 +755,6 @@ users:
     - false
     - 1
     - false
-    - 
   - - 22
     - hadi@gmail.com
     - $2a$10$yOaxbQhZErJA.SwsYbpjM.rQOudaIrD3WHKdqdf4.DcurlJFcGD.y
@@ -795,7 +785,6 @@ users:
     - false
     - 1
     - false
-    - 
 
 ---
 votes:
