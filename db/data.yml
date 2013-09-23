@@ -9,6 +9,7 @@ comments:
   - created_at
   - updated_at
   - user_id
+  - removed
   records: 
   - - 1
     - Question
@@ -17,13 +18,7 @@ comments:
     - 2013-08-02 02:51:54.000000000 Z
     - 2013-08-12 05:10:48.000000000 Z
     - 1
-  - - 7
-    - 
-    - 
-    - wow wow wow
-    - 2013-08-12 06:34:56.000000000 Z
-    - 2013-08-12 06:34:56.000000000 Z
-    - 
+    - false
   - - 8
     - Question
     - 10
@@ -31,6 +26,7 @@ comments:
     - 2013-08-19 03:22:26.000000000 Z
     - 2013-08-19 03:22:26.000000000 Z
     - 8
+    - false
   - - 9
     - Question
     - 10
@@ -38,6 +34,128 @@ comments:
     - 2013-08-19 03:23:14.000000000 Z
     - 2013-08-19 03:23:14.000000000 Z
     - 8
+    - false
+  - - 11
+    - Question
+    - 10
+    - aasdfghjkl
+    - 2013-08-28 02:52:11.000000000 Z
+    - 2013-08-28 02:52:11.000000000 Z
+    - 10
+    - false
+  - - 12
+    - Question
+    - 10
+    - daada
+    - 2013-09-02 06:46:06.000000000 Z
+    - 2013-09-02 06:46:06.000000000 Z
+    - 10
+    - false
+  - - 13
+    - Question
+    - 15
+    - bales comment
+    - 2013-09-03 05:57:54.000000000 Z
+    - 2013-09-03 05:57:54.000000000 Z
+    - 12
+    - false
+  - - 14
+    - Question
+    - 17
+    - asdddddd
+    - 2013-09-05 02:58:47.000000000 Z
+    - 2013-09-05 02:58:47.000000000 Z
+    - 12
+    - false
+  - - 15
+    - Question
+    - 18
+    - aaaaaaaaaaaa
+    - 2013-09-05 02:59:14.000000000 Z
+    - 2013-09-05 02:59:14.000000000 Z
+    - 12
+    - false
+  - - 16
+    - Question
+    - 16
+    - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    - 2013-09-05 03:02:57.000000000 Z
+    - 2013-09-05 06:59:58.000000000 Z
+    - 12
+    - true
+  - - 17
+    - Question
+    - 13
+    - ! "aaaaaaaaa\r\n"
+    - 2013-09-05 03:44:32.000000000 Z
+    - 2013-09-05 03:44:32.000000000 Z
+    - 10
+    - false
+  - - 18
+    - Question
+    - 14
+    - aaaaaaaaaaaaaaaaaaa
+    - 2013-09-05 03:47:35.000000000 Z
+    - 2013-09-05 03:47:35.000000000 Z
+    - 10
+    - false
+  - - 19
+    - Question
+    - 19
+    - what the f*ck!!!
+    - 2013-09-05 03:53:29.000000000 Z
+    - 2013-09-05 03:53:29.000000000 Z
+    - 8
+    - false
+  - - 20
+    - Question
+    - 19
+    - f*ckin' bitch
+    - 2013-09-05 03:56:17.000000000 Z
+    - 2013-09-05 03:56:17.000000000 Z
+    - 8
+    - false
+  - - 21
+    - Question
+    - 16
+    - what the fuck man!!!!!
+    - 2013-09-05 07:52:24.000000000 Z
+    - 2013-09-05 07:52:44.000000000 Z
+    - 8
+    - true
+  - - 22
+    - Question
+    - 16
+    - oioioi
+    - 2013-09-05 08:40:42.000000000 Z
+    - 2013-09-05 08:40:42.000000000 Z
+    - 10
+    - false
+  - - 23
+    - Question
+    - 25
+    - begini loh caranya ....
+    - 2013-09-06 09:56:34.000000000 Z
+    - 2013-09-06 09:56:34.000000000 Z
+    - 12
+    - false
+
+---
+genders:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Male
+    - 2013-09-04 02:36:47.000000000 Z
+    - 2013-09-04 02:36:47.000000000 Z
+  - - 2
+    - Female
+    - 2013-09-04 02:36:54.000000000 Z
+    - 2013-09-04 02:36:54.000000000 Z
 
 ---
 groups:
@@ -69,35 +187,105 @@ questions:
   - slug
   - created_at
   - updated_at
+  - total_view
   records: 
+  - - 16
+    - Bagaimana cara membuat sebuah pertanyaan?
+    - ! "tanya donk,,\r\nbagaimana supaya saya membuat sebuah pertanyaan di Q-Zone.com"
+    - 12
+    - bagaimana-cara-membuat-sebuah-pertanyaan
+    - 2013-09-04 01:58:37.000000000 Z
+    - 2013-09-06 09:59:07.000000000 Z
+    - 26
+  - - 19
+    - how to train u're squad team
+    - give them some weed
+    - 14
+    - how-to-train-u-re-squad-team
+    - 2013-09-05 03:52:47.000000000 Z
+    - 2013-09-06 06:38:42.000000000 Z
+    - 13
+  - - 20
+    - Lorem Ipsum Dolor Sit Amet?
+    - apa sih artinyaa???
+    - 16
+    - lorem-ipsum-dolor-sit-amet
+    - 2013-09-05 08:55:50.000000000 Z
+    - 2013-09-05 08:55:50.000000000 Z
+    - 1
+  - - 21
+    - How to build a house
+    - call tukang
+    - 16
+    - how-to-build-a-house
+    - 2013-09-05 08:56:34.000000000 Z
+    - 2013-09-05 08:56:35.000000000 Z
+    - 1
+  - - 22
+    - Einstein
+    - bagaimana cara sya bisa menjadi sperti seorang einstain
+    - 17
+    - einstein
+    - 2013-09-05 08:58:06.000000000 Z
+    - 2013-09-05 08:58:06.000000000 Z
+    - 1
+  - - 23
+    - what ??
+    - koprol koprol koprol
+    - 8
+    - what
+    - 2013-09-05 09:00:51.000000000 Z
+    - 2013-09-05 09:00:51.000000000 Z
+    - 1
+  - - 24
+    - kepo
+    - kepokepo
+    - 8
+    - kepo
+    - 2013-09-05 09:01:04.000000000 Z
+    - 2013-09-05 09:47:29.000000000 Z
+    - 25
+  - - 25
+    - install ubuntu
+    - bagaimana cara install ubuntu menggunakan live USB
+    - 22
+    - install-ubuntu
+    - 2013-09-06 09:54:02.000000000 Z
+    - 2013-09-06 09:56:34.000000000 Z
+    - 11
+
+---
+reputations:
+  columns:
+  - id
+  - message
+  - user_id
+  - from_id
+  - point
+  - created_at
+  - updated_at
+  records: 
+  - - 8
+    - mantaf bro
+    - 10
+    - 12
+    - 
+    - 2013-09-06 06:40:37.000000000 Z
+    - 2013-09-06 06:40:37.000000000 Z
+  - - 9
+    - great bro
+    - 10
+    - 14
+    - 
+    - 2013-09-06 06:41:22.000000000 Z
+    - 2013-09-06 06:41:22.000000000 Z
   - - 10
-    - makan tidur
-    - bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing
-      >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun
-      >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing >> makan
-      >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan
-      >> browsing >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur
-      >> bangun >> makan >> browsing >> makan >> tidur >> bangun >> makan >> browsing
-      >> makan >> tidur >> bangun >> makan >> browsing >> makan >> tidur >> bangun
-      >> makan >> browsing >> makan >> tidur >>
-    - 8
-    - makan-tidur
-    - 2013-08-19 02:30:17.000000000 Z
-    - 2013-08-19 02:33:06.000000000 Z
-  - - 11
-    - olahraga
-    - joging, fitness, swimming
-    - 8
-    - olahraga
-    - 2013-08-19 04:00:24.000000000 Z
-    - 2013-08-19 04:00:24.000000000 Z
-  - - 12
-    - Bernyawa
-    - asdasdasd
-    - 8
-    - bernyawa
-    - 2013-08-19 04:00:53.000000000 Z
-    - 2013-08-19 04:27:02.000000000 Z
+    - great work
+    - 10
+    - 12
+    - 
+    - 2013-09-06 09:57:26.000000000 Z
+    - 2013-09-06 09:57:26.000000000 Z
 
 ---
 taggings:
@@ -127,14 +315,6 @@ taggings:
     - 
     - tags
     - 2013-08-19 02:30:17.000000000 Z
-  - - 6
-    - 4
-    - 11
-    - Question
-    - 
-    - 
-    - tags
-    - 2013-08-19 04:00:24.000000000 Z
   - - 8
     - 4
     - 12
@@ -143,6 +323,86 @@ taggings:
     - 
     - tags
     - 2013-08-19 04:27:02.000000000 Z
+  - - 15
+    - 12
+    - 16
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-04 01:58:37.000000000 Z
+  - - 18
+    - 13
+    - 19
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 03:52:47.000000000 Z
+  - - 19
+    - 14
+    - 20
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 08:55:50.000000000 Z
+  - - 20
+    - 15
+    - 21
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 08:56:34.000000000 Z
+  - - 21
+    - 16
+    - 21
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 08:56:34.000000000 Z
+  - - 22
+    - 14
+    - 22
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 08:58:06.000000000 Z
+  - - 23
+    - 17
+    - 23
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 09:00:51.000000000 Z
+  - - 24
+    - 18
+    - 24
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-05 09:01:04.000000000 Z
+  - - 25
+    - 19
+    - 25
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-06 09:54:02.000000000 Z
+  - - 26
+    - 20
+    - 25
+    - Question
+    - 
+    - 
+    - tags
+    - 2013-09-06 09:54:02.000000000 Z
 
 ---
 tags:
@@ -162,6 +422,34 @@ tags:
     - bergadang
   - - 6
     - hidup
+  - - 7
+    - OS
+  - - 8
+    - komputer
+  - - 9
+    - IT
+  - - 10
+    - stresss
+  - - 11
+    - rails
+  - - 12
+    - Q-Zone
+  - - 13
+    - life style
+  - - 14
+    - tanya
+  - - 15
+    - build
+  - - 16
+    - house
+  - - 17
+    - what
+  - - 18
+    - kepo
+  - - 19
+    - ubuntu
+  - - 20
+    - install linux
 
 ---
 users:
@@ -191,19 +479,25 @@ users:
   - created_at
   - updated_at
   - image
+  - username
+  - total_view
+  - is_admin
+  - gender_id
+  - super_admin
+  - notice
   records: 
   - - 8
     - mm@mm.com
     - $2a$10$XqU70ydI5jM4Ify.qHvnDOXERYwucBq6iwFIjdcGWhHr.bO5V4o9K
-    - ad
-    - da
-    - ad-da
+    - Criminal
+    - Cat
+    - criminal-cat
     - 
     - 
     - 
-    - 9
-    - 2013-08-19 01:55:04.000000000 Z
-    - 2013-08-18 10:17:18.000000000 Z
+    - 18
+    - 2013-09-06 06:37:14.000000000 Z
+    - 2013-09-06 02:12:58.000000000 Z
     - 127.0.0.1
     - 127.0.0.1
     - 
@@ -215,32 +509,13 @@ users:
     - 
     - 
     - 2013-08-16 03:40:44.000000000 Z
-    - 2013-08-19 01:55:04.000000000 Z
-    - faggot.jpg
-  - - 9
-    - adli@adli.com
-    - $2a$10$1G0K2o5DyiKu4.zuOUvy8eZul.vHlfsvmVHaFLID9HmOz8XJILJfi
-    - Adli
-    - faggot
-    - adli-faggot
+    - 2013-09-06 06:37:14.000000000 Z
+    - criminalcat.jpg
     - 
-    - 
-    - 
-    - 0
-    - 
-    - 
-    - 
-    - 
-    - Ev4u9gzkmL7RaQup9PQv
-    - 
-    - 2013-08-16 04:15:01.000000000 Z
-    - 
-    - 0
-    - 
-    - 
-    - 
-    - 2013-08-16 04:15:01.000000000 Z
-    - 2013-08-16 04:15:01.000000000 Z
+    - 7
+    - false
+    - 1
+    - false
     - 
   - - 10
     - agus@agus.com
@@ -251,28 +526,220 @@ users:
     - 
     - 
     - 
+    - 57
+    - 2013-09-06 09:59:24.000000000 Z
+    - 2013-09-06 09:58:14.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-08-16 07:54:58.000000000 Z
+    - 2013-08-16 07:54:47.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 07:54:47.000000000 Z
+    - 2013-09-06 10:01:24.000000000 Z
+    - ss.jpg
+    - 
+    - 19
+    - false
+    - 1
+    - true
+    - 
+  - - 12
+    - soujiroseta@gmail.com
+    - $2a$10$ocd0f/7lQlbkuxagJ4oS2OU.Ve6w6rbeSdJL8zvaBYeNC7WnnxCci
+    - Soujiro
+    - Seta
+    - soujiro-seta
+    - 
+    - 
+    - 
+    - 27
+    - 2013-09-06 09:59:01.000000000 Z
+    - 2013-09-06 09:56:00.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-02 03:50:04.000000000 Z
+    - 2013-09-02 03:49:56.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-02 03:49:56.000000000 Z
+    - 2013-09-06 10:00:36.000000000 Z
+    - 
+    - 
+    - 6
+    - false
+    - 1
+    - false
+    - 
+  - - 14
+    - yunogasai@gmail.com
+    - $2a$10$EDi/vKXX7L7GKIViohawIuRRwljFPQitwNjD5JKH5Q5BGJ8.NPYuS
+    - Yuno
+    - Gasai
+    - yuno-gasai
+    - 
+    - 
+    - 
+    - 7
+    - 2013-09-06 06:41:04.000000000 Z
+    - 2013-09-06 06:38:49.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-04 03:47:53.000000000 Z
+    - 2013-09-04 03:47:48.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-04 03:47:48.000000000 Z
+    - 2013-09-06 06:41:04.000000000 Z
+    - yunogasai.jpg
+    - 
+    - 
+    - false
     - 2
-    - 2013-08-19 04:36:07.000000000 Z
-    - 2013-08-16 07:54:58.000000000 Z
+    - false
+    - 
+  - - 16
+    - kecoa@gmail.com
+    - $2a$10$wmxE5n11gjncWv2FAayUmentVc00EGa85XemnhZzTB7tzLK7uC0QS
+    - Kecoa
+    - Express
+    - kecoa-express
+    - 
+    - 
+    - 
+    - 3
+    - 2013-09-06 04:39:34.000000000 Z
+    - 2013-09-06 04:33:45.000000000 Z
     - 127.0.0.1
     - 127.0.0.1
     - 
-    - 2013-08-16 07:54:58.000000000 Z
-    - 2013-08-16 07:54:47.000000000 Z
+    - 2013-09-05 08:54:43.000000000 Z
+    - 2013-09-05 08:54:09.000000000 Z
     - 
     - 0
     - 
     - 
     - 
-    - 2013-08-16 07:54:47.000000000 Z
-    - 2013-08-19 04:36:07.000000000 Z
-    - 969437_4378965130865_1480453819_n.jpg
-  - - 11
-    - aa@as.com
-    - $2a$10$qpVIhfyQ5o94BMF3TjGPeO1o6SVj8VDM4a9mVDrU7jPJtn/dc3mPK
-    - Jarot
-    - Faggot
-    - jarot-faggot
+    - 2013-09-05 08:54:09.000000000 Z
+    - 2013-09-06 04:39:50.000000000 Z
+    - kecoa.jpg
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+  - - 17
+    - kucing@gmail.com
+    - $2a$10$WgDDSdlWN637HaHIRerI6uXun5qeLgiv5EV9rbjk.zD5xjpBekuyG
+    - Kucing
+    - Sableng
+    - kucing-sableng
+    - 
+    - 
+    - 
+    - 2
+    - 2013-09-06 04:40:55.000000000 Z
+    - 2013-09-05 08:57:04.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-05 08:57:04.000000000 Z
+    - 2013-09-05 08:56:59.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-05 08:56:59.000000000 Z
+    - 2013-09-06 04:41:12.000000000 Z
+    - Kucing_Mabok.jpeg
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+  - - 18
+    - darkflamemaster@gmail.com
+    - $2a$10$GM98H/2.KoGYKq5MSjhFrO9mPAlmjKCK49mce.FybolGTAhbpooHO
+    - Togashi
+    - Yuuta
+    - togashi-yuuta
+    - 
+    - 
+    - 
+    - 2
+    - 2013-09-06 04:40:24.000000000 Z
+    - 2013-09-05 08:58:51.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-05 08:58:51.000000000 Z
+    - 2013-09-05 08:58:48.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-05 08:58:48.000000000 Z
+    - 2013-09-06 04:40:40.000000000 Z
+    - togashi-kun.jpg
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+  - - 20
+    - hollow@gmail.com
+    - $2a$10$rmVkbzWTz1x/DZpB7M4d5eCidpOBHOirKVsIwtad5Z9NWxucc50P6
+    - Vasto
+    - Lorde
+    - vasto-lorde
+    - 
+    - 
+    - 
+    - 1
+    - 2013-09-06 04:38:09.000000000 Z
+    - 2013-09-06 04:38:09.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-06 04:38:09.000000000 Z
+    - 2013-09-06 04:38:04.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-06 04:38:04.000000000 Z
+    - 2013-09-06 04:39:25.000000000 Z
+    - vastolorder.png
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+  - - 21
+    - budi@gmail.com
+    - $2a$10$iCdTjCvMm9U7kd1.PJkyWeWwmZObX/1b2HIzUewDMR7usqkVFZBPu
+    - budi
+    - diarta
+    - budi-diarta
     - 
     - 
     - 
@@ -281,14 +748,86 @@ users:
     - 
     - 
     - 
-    - qHp3Q3JSeyzV7ywGTcje
+    - ucbVpsypsb3Ts9iqFyp9
     - 
-    - 2013-08-18 10:11:36.000000000 Z
+    - 2013-09-06 09:51:28.000000000 Z
     - 
     - 0
     - 
     - 
     - 
-    - 2013-08-18 10:11:36.000000000 Z
-    - 2013-08-18 10:11:36.000000000 Z
+    - 2013-09-06 09:51:28.000000000 Z
+    - 2013-09-06 09:51:28.000000000 Z
     - 
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+  - - 22
+    - hadi@gmail.com
+    - $2a$10$yOaxbQhZErJA.SwsYbpjM.rQOudaIrD3WHKdqdf4.DcurlJFcGD.y
+    - hadi
+    - sanusi
+    - hadi-sanusi
+    - 
+    - 
+    - 
+    - 1
+    - 2013-09-06 09:52:47.000000000 Z
+    - 2013-09-06 09:52:47.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-09-06 09:52:47.000000000 Z
+    - 2013-09-06 09:52:38.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-09-06 09:52:38.000000000 Z
+    - 2013-09-06 09:52:47.000000000 Z
+    - 
+    - 
+    - 
+    - false
+    - 1
+    - false
+    - 
+
+---
+votes:
+  columns:
+  - id
+  - user_id
+  - comment_id
+  - created_at
+  - updated_at
+  - vote_status
+  records: 
+  - - 1
+    - 10
+    - 8
+    - 2013-09-02 06:45:54.000000000 Z
+    - 2013-09-02 06:45:54.000000000 Z
+    - LIKE
+  - - 2
+    - 12
+    - 8
+    - 2013-09-02 10:05:34.000000000 Z
+    - 2013-09-02 10:05:34.000000000 Z
+    - LIKE
+  - - 3
+    - 12
+    - 11
+    - 2013-09-02 10:06:02.000000000 Z
+    - 2013-09-02 10:06:02.000000000 Z
+    - LIKE
+  - - 4
+    - 12
+    - 22
+    - 2013-09-06 09:56:59.000000000 Z
+    - 2013-09-06 09:56:59.000000000 Z
+    - LIKE
