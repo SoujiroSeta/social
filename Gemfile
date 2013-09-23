@@ -22,12 +22,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'devise'
-gem 'friendly_id'
-gem 'acts-as-taggable-on'
+gem 'devise' #model
+gem 'friendly_id' #slug
+gem 'acts-as-taggable-on' #tags
 gem 'bootstrap-sass', '~> 2.3.2.0'
-gem 'carrierwave'
-gem 'yaml_db'
+gem 'carrierwave' #upload gambar
+gem 'yaml_db' #back up data
 gem 'randumb'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

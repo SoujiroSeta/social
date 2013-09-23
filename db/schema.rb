@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905065743) do
+ActiveRecord::Schema.define(:version => 20130906070302) do
 
   create_table "comments", :force => true do |t|
     t.string   "commentable_type"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(:version => 20130905065743) do
     t.boolean  "is_admin",               :default => false
     t.integer  "gender_id"
     t.boolean  "super_admin",            :default => false
+    t.string   "notice"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

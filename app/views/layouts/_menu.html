@@ -40,6 +40,9 @@
                 <li class='dropdown' >
                   <%= link_to 'My Profile', user_path(current_user.id) %>        
                 </li>
+                 <li class='dropdown' >
+                  <%= link_to 'My Reputations', reputations_path %>        
+                </li>
                 <li>
                   <% if user_signed_in? %>
                     <%= link_to destroy_user_session_path, method: :delete do %>
