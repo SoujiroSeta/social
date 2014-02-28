@@ -1,0 +1,74 @@
+<div class="navbar navbar-fixed-top" >
+  <% if user_signed_in? && current_user.super_admin? %>
+    <%= link_to super_admin_index_path do %>
+      <%= image_tag '/assets/pirate.png', style: 'width: 40px; height: 40px; float:left; margin-top:4px;' %>
+    <% end %> 
+  <% end %>  
+  <% if user_signed_in? && current_user.is_admin? %>
+    <%= link_to super_admin_index_path do %>
+      <%= image_tag '/assets/admin.png', style: 'width: 40px; height: 40px; float:left; margin-top:4px;' %>
+    <% end %> 
+  <% end %>  
+  <div class="navbar-inner" >
+    <div class="container" id="full-screen-backoffice">
+      <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <strong>
+        <%= link_to 'Question-Zone', root_path, class: 'brand q-zone' %>
+      </strong>
+
+      <div class="nav-collapse">
+        <ul class="nav pull-right">
+          <li>
+
+              <%= form_tag search_index_path, method: :get, class: 'navbar-search pull-left', id: 'cari' do %>
+                <%= text_field_tag :q, params[:q], placeholder: 'Search' %>
+              <% end %>
+          </li>
+        </ul>
+        <ul class="nav pull-right">
+          <% if user_signed_in? %>
+            <li class="dropdown">
+              <%= link_to '#', data: {toggle: :dropdown} do %>
+               <%= image_tag current_user.image_url, class: 'menu' %>
+                <%= current_user.name %>
+
+                <b class='caret'></b>
+              <% end %>
+              <ul class='dropdown-menu'>
+                <li class='dropdown' >
+                  <%= link_to 'My Profile', user_path(current_user.id) %>        
+                </li>
+                 <li class='dropdown' >
+                  <%= link_to 'My Reputations', reputations_path %>        
+                </li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                      <span>Log Out</span>
+                      <%= image_tag '/assets/logout.png', class: :logout %>
+                    <% end %>  
+                  <% end %>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <%= link_to 'Posting Question', new_question_path %>
+            </li>
+            <% else %>
+            <li>
+              <%= link_to 'Sign Up', new_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to 'Login', new_user_session_path%>
+            </li>
+          <% end %>
+        </ul> 
+      </div>
+    </div>
+  </div>
+</div>

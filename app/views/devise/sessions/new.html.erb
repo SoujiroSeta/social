@@ -1,11 +1,10 @@
-<h2 class='title'>Sign in</h2>
-
+<!-- <h2 class='title'>Sign in</h2> -->
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
 <div>
   <div class='signin', style='margin:10px;'>
     <div>
-       <%= f.text_field :email, placeholder: 'Email' %>
+       <%= f.text_field :login, placeholder: 'Email' %>
        <%= f.password_field :password, placeholder: 'Password' %>
     </div>
 
@@ -47,7 +46,7 @@
 </div>
 
     
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide carousel-border">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>

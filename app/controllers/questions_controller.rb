@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-	before_filter :authenticate_user!, exept: [:index, :show]
+	before_filter :authenticate_user!, except: [:index, :show]
 	def index
 		@questions = Question.all
 

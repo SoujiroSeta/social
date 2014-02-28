@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'carrierwave' #upload gambar
 gem 'yaml_db' #back up data
 gem 'randumb'
+gem 'ckeditor'
+gem 'mini_magick'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

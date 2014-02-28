@@ -84,7 +84,7 @@
 					  <!-- jika ada user yang login, dan yang login adalah admin atau super_admin -->
 					  <!-- maka tampilkan button delete comment -->
 
-					<% if user_signed_in? && current_user.is_admin? || current_user.super_admin? %>
+					<% if user_signed_in? && current_user.is_admin? %>
 					  <%= link_to 'Remove Comment', comment_path(comment), method: :delete %>
 					<% end %>
 

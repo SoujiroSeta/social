@@ -1,13 +1,14 @@
 body {
 	/*background: image-url();*/
-	background: #1E1E1E;
+	background: #eeeeee;
 
 }
 
 .navbar {
 	.q-zone {
-	font-size: 26px; 
-	text-shadow: 9px 0px 4px #999;
+		color: black; 
+		font-size: 26px; 
+		text-shadow: 9px 0px 4px #999;
 	}
 }
 
@@ -42,7 +43,7 @@ img.logout {
 
 .slide {
 	width: 600px;
-	height: 200px;
+	height: 270px;
 	margin: 35px;
 }
 
@@ -243,7 +244,7 @@ ul.ranking {
 }
 
 .carousel-control {
-	margin-top:30px;
+	margin-top: 5px;
 }
 
 .picslide {
@@ -319,7 +320,7 @@ a.category1:hover {
 }
 
 #judul {
-	float: left;
+	/*float: left;*/
 	font-size: 18px;
 	line-height: 34px;
 	margin-left: 2%;
@@ -329,4 +330,8 @@ a.category1:hover {
 #navbar {
 	margin-top: 40px;
 	float: right;
+}
+
+p {
+	color: black;
 }

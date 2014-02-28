@@ -2,7 +2,7 @@
 	<ul>
 		<% @question.errors.full_messages.each do |message| %>
 		<li>
-			<%= message%>
+			<%= message %>
 		</li>
 		<% end %>
 	</ul>
@@ -11,27 +11,27 @@
 <%= form_for @question do |f| %>
 <table class='textcolor' >
 	<tr>
-		<td>Title</td>
-		<td>:</td>
-		<td><%= f.text_field :title, class: 'titlesize'%></td>
+		<td>
+			<%= f.label :title %>
+			<%= f.text_field :title, class: 'titlesize'%>
+		</td>
 	</tr>
 
 	<tr>
-		<td>Message</td>
-		<td>:</td>
-		<td><%= f.text_area :message, class: 'messagesize' %></td>
+		<td><%= f.label :message %>
+			<%= f.cktext_area :message, class: 'messagesize' %>
+		</td>
 	</tr>
 	<tr>
-		<td>Tag</td>
-		<td>:</td>
-		<td><%= f.text_field :tag_list, class: 'tagsize' %>
-			<p class='insert'>insert category</p>
-		 </td>
+		<td>
+			<%= f.label :tag_list %>
+			<%= f.text_field :tag_list, class: 'tagsize' %>
+			<p class='insert'>Masukan kategori. Contoh: gaya hidup, 
+				life style</p>
+		</td>
 	</tr>
 
 	<tr>
-		<td></td>
-		<td></td>
 		<td><%= f.submit style: 'margin-left:10px; float:left;' %> </td>
 	</tr>
 

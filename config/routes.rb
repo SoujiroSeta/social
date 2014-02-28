@@ -1,5 +1,7 @@
-Social::Application.routes.draw do
+  Social::Application.routes.draw do
   
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   get "super_admin/index"
 
