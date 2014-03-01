@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 	def index
 		@questions = Question.all
-
+		@list_questions = Question.order('created_at desc')
 		@recent_questions = Question.order('total_view desc').limit(5)
 	end
 
