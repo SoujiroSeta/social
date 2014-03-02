@@ -6,6 +6,16 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link rel="icon" type="image/png" href="/assets/ask.png"/>
+  <script type="text/javascript">
+        $(window).on('load', function () {
+
+            $('.selectpicker').selectpicker({
+                'selectedText': 'cat'
+            });
+
+            // $('.selectpicker').selectpicker('hide');
+        });
+    </script>
 </head>
 <body>
 	<% if notice %>
