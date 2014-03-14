@@ -5,9 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -48,4 +45,10 @@ gem 'mini_magick'
 
 group :development do
 	gem 'mailcatcher'
+	gem 'mysql2'
+end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg', '~> 0.15.1'
 end

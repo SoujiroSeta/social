@@ -22,24 +22,28 @@
 			<%= f.cktext_area :message, class: 'messagesize' %>
 		</td>
 	</tr>
-	<tr>
+	<!-- <tr>
 		<td>
 			<%= f.label :tag_list %>
 			<%= f.text_field :tag_list, class: 'tagsize' %>
 			<p class='insert'>Masukan kategori. Contoh: gaya hidup, 
 				life style</p>
 		</td>
-	</tr>
+	</tr> -->
 	<tr>
 		<td>
-			<select name='question[tag_list]' class="selectpicker tagsize" multiple>
+			<%= f.select(:tag_list, [['Type A', 'Type A'],
+        ['Type B', 'Type B'],['Type C', 'Type C'],
+        ['Type D', 'Type D'],['Type E', 'Type E']],
+        { :prompt => "Please select"},
+        { :multiple => true, :size => 5, class: 'selectpicker' }) %>
+			<!-- <select name='question[tag_list]' class="selectpicker tagsize" multiple>
 				<optgroup label='Programmer'>
 					<option>PHP</option>
 		      <option>JAVA</option>
 		      <option>Phyton</option>
 				</optgroup>
-	      
-	  	</select>
+	  	</select> -->
 		</td>
 	</tr>
 	<tr>

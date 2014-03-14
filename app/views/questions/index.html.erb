@@ -1,42 +1,49 @@
 <div class='row-fluid'>
 	<div class='span12'>
 		<%= render 'layouts/locations' %>
-		<div class='span7 kiri' style='border: 1px solid;'>
-			<% @list_questions.each do |question| %>
-			<div>
-				<div>
-						<%= link_to question.title, question_path(question), class: 't-question' %>
-					<div>
-						<% if user_signed_in? && current_user.is_admin? %>
-							<%= link_to question_path(question), 
-							method: :delete do %>
-							<i  class='icon-remove'></i>
-							<% end -%>
-						<% end -%>
-					</div>
-				</div>
-
-				<div id='dua'>
-					<p style='float:left; margin-right:70px;'>
-						<%= link_to question.user.name, user_path(question.user) %>
-					</p>
-					<i class='icon-tags'></i>
-					<% question.tags.each do |tag| %>
-					
-						<%= link_to tag.name, tag_path(tag), class: :category1 %>
-					<% end %>
-					
-					<%= link_to "Answer #{question.comments.count}", 
-					question_path(question), id: :category, class: :kanan %>
-
-					<%= link_to "View #{question.total_view.to_i} times", 
-					question_path(question), id: :category, class: :kanan %>
-				</div>
-				</div><br>
-			<% end %>
+		<div>
+			<h2>New Questions</h2>
 		</div>
-		<div class='span4' style='border: 1px solid;'>
-			<h1>konten kanan</h1>
+		<div class='containerer'>
+			<div class='span7 kiri content'>
+				<% @list_questions.each do |question| %>
+				<div>
+					<div>
+							<%= link_to question.title, question_path(question), class: 't-question' %>
+						<div>
+							<% if user_signed_in? && current_user.is_admin? %>
+								<%= link_to question_path(question), 
+								method: :delete do %>
+								<i  class='icon-remove'></i>
+								<% end -%>
+							<% end -%>
+						</div>
+					</div>
+
+					<div id='dua'>
+						<p style='float:left; margin-right:70px;'>
+							<%= link_to question.user.name, user_path(question.user) %>
+						</p>
+						<i class='icon-tags'></i>
+						<% question.tags.each do |tag| %>
+						
+							<%= link_to tag.name, tag_path(tag), class: :category1 %>
+						<% end %>
+						
+						<%= link_to "Answer #{question.comments.count}", 
+						question_path(question), id: :category, class: :kanan %>
+
+						<%= link_to "View #{question.total_view.to_i} times", 
+						question_path(question), id: :category, class: :kanan %>
+					</div>
+				</div><br>
+				<hr>
+				<% end %>
+			</div>
+
+			<div class='span4' style='border: 1px solid;'>
+				<h1>konten kanan</h1>
+			</div>
 		</div>
 	</div>
 </div>
