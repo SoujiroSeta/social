@@ -17,15 +17,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-	gem 'mysql2'
-end
-
-group :production do
-	gem 'rails_12factor'
-	gem 'pg', '~> 0.15.1'
-end
-
 gem 'jquery-rails'
 gem 'devise' #model
 gem 'friendly_id' #slug
@@ -51,4 +42,10 @@ gem 'randumb'
 
 group :development do
 	gem 'mailcatcher'
+	gem 'mysql2'
+end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg', '~> 0.15.1'
 end
