@@ -178,7 +178,7 @@ DEPENDENCIES
   jquery-rails
   mailcatcher
   mysql2
-  pg (~> 0.15.1)
+  pg
   rails (= 3.2.13)
   rails_12factor
   randumb
