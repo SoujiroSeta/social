@@ -8,10 +8,10 @@ development:
   database: social_dev
   host: localhost
   username: root
-  password: toor
+  password: 
   pool: 5
   timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /opt/lampp/var/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,17 +21,17 @@ test:
   database: social_test
   host: localhost
   username: root
-  password: toor
+  password: 
   pool: 5
   timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /opt/lampp/var/mysql/mysql.sock
 
 production:
   adapter: mysql2
   database: social_pro
   host: localhost
   username: root
-  password: toor
+  password: 
   pool: 5
   timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /opt/lampp/var/mysql/mysql.sock
