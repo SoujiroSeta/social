@@ -29,9 +29,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: dfb2r80brsvflg
-  host:  ec2-174-129-197-200.compute-1.amazonaws.com
+  database: social_production
   pool: 5
-  port: 5432
-  username: qgqrpdahgpqqhn
-  password: gqgv7FQEFbK6em-Lyu-qWqSA3x
+  username: social
+  password: 

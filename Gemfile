@@ -2,11 +2,20 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+group :development do
+	gem 'mailcatcher'
+	gem 'mysql2'
+end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg', '~> 0.15.1'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -19,12 +28,3 @@ gem 'carrierwave' #upload gambar
 gem 'yaml_db' #back up data
 gem 'randumb'
 
-group :development do
-	gem 'mailcatcher'
-	gem 'mysql2'
-end
-
-group :production do
-	gem 'rails_12factor'
-	gem 'pg'
-end
